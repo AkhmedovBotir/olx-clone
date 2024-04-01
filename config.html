@@ -1,0 +1,570 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OLX</title>
+    <script src="https://cdn.jsdelivr.net/npm/virtual-select-plugin@1.0.42/dist/virtual-select.min.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/virtual-select-plugin@1.0.42/dist/virtual-select.min.css" rel="stylesheet">
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.11.3/font/bootstrap-icons.min.css"
+        integrity="sha512-dPXYcDub/aeb08c63jRq/k6GaKccl256JQy/AnOq7CAnEZ9FzSL9wSbcZkMp4R26vBsMLFYH4kQ67/bbV8XaCQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+        integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="CSS/style.css">
+    <link rel="stylesheet" href="CSS/user.css">
+    <link rel="stylesheet" href="CSS/dashboard.css">
+    <link rel="stylesheet" href="CSS/config.css">
+    <link rel="stylesheet" href="CSS/newads.css">
+
+
+</head>
+
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg">
+        <div class="container d-flex justify-content-between">
+            <a class="navbar-brand" href="dashboard.html">
+                <img src="Assets/img/logo.png" />
+            </a>
+
+            <div class="d-flex justify-content-end flex-row ">
+                <ul class="navbar-nav mb-2 mb-lg-0">
+                    <li class="nav-item mx-3">
+                        <a class="nav-link " aria-current="page" href="sms.html">
+                            <i class="fa-regular fa-comment"></i>
+                            Сообщения</a>
+                    </li>
+                    <div class="nav-cont mx-3 d-flex align-items-center">
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">O'Z</a>
+                        </li>
+                        |
+                        <li class="nav-item">
+                            <a class="nav-link active" href="#">РУ </a>
+                        </li>
+                    </div>
+                    <a class="nav-link " aria-current="page" href="favourites.html">
+                        <i class="fa-regular fa-heart mx-3"></i>
+                    </a>
+                    <div class=" dropdown mx-3">
+                        <a class="dropdow nav-link " aria-current="page" href="dashboard.html">
+                            <i class="fa-regular fa-user "></i>
+                            Ваш профиль
+                            <i class="bi bi-chevron-down"></i>
+                        </a>
+                        <ul class="dropdown-content">
+                            <div class="drop-user">
+                                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                                    width="1em" height="1em" viewBox="0 0 71 71" data-testid="user-profile-no-image"
+                                    alt="User avatar" class="css-1cxkt8y">
+                                    <defs>
+                                        <path id="avatar_svg__a"
+                                            d="M.029 34.9c0 19.272 15.623 34.896 34.896 34.896 19.273 0 34.896-15.624 34.896-34.897C69.821 15.627 54.198.003 34.925.003 15.652.003.03 15.627.03 34.9">
+                                        </path>
+                                        <path id="avatar_svg__c"
+                                            d="M0 34.99c0 19.272 15.624 34.896 34.896 34.896 19.273 0 34.896-15.624 34.896-34.896C69.792 15.717 54.17.094 34.896.094 15.624.094 0 15.717 0 34.99z">
+                                        </path>
+                                    </defs>
+                                    <g fill="none" fill-rule="evenodd">
+                                        <g transform="translate(.903 .903)">
+                                            <mask id="avatar_svg__b" fill="#fff">
+                                                <use xlink:href="#avatar_svg__a"></use>
+                                            </mask>
+                                            <path fill="#3A77FF"
+                                                d="M69.821 34.9c0 19.272-15.623 34.896-34.896 34.896C15.652 69.796.03 54.172.03 34.899.029 15.627 15.652.003 34.925.003c19.273 0 34.896 15.624 34.896 34.896"
+                                                mask="url(#avatar_svg__b)"></path>
+                                        </g>
+                                        <g transform="translate(.932 .906)">
+                                            <mask id="avatar_svg__d" fill="#fff">
+                                                <use xlink:href="#avatar_svg__c"></use>
+                                            </mask>
+                                            <use fill="#D8DFE0" xlink:href="#avatar_svg__c"></use>
+                                            <path fill="#406367" d="M10.788 98.23h48.216V50.013H10.788z"
+                                                mask="url(#avatar_svg__d)">
+                                            </path>
+                                            <path fill="#EBEEEF"
+                                                d="M53.436 34.896c0 10.24-8.3 18.54-18.54 18.54-10.239 0-18.54-8.3-18.54-18.54 0-10.239 8.301-18.54 18.54-18.54 10.24 0 18.54 8.301 18.54 18.54"
+                                                mask="url(#avatar_svg__d)"></path>
+                                            <path fill="#7F9799"
+                                                d="M44.812 27.96c-3.975 5.115-11.344 6.04-16.46 2.065-5.115-3.975-6.04-11.344-2.065-16.46 3.975-5.115 11.344-6.04 16.46-2.065 5.116 3.975 6.04 11.344 2.065 16.46"
+                                                mask="url(#avatar_svg__d)"></path>
+                                            <path fill="#7F9799"
+                                                d="m44.547 28.301-9.604-7.462 7.463-9.604 9.603 7.462zm-30.922-1.955a7.617 7.617 0 1 1 15.115-1.897 7.617 7.617 0 0 1-15.115 1.897"
+                                                mask="url(#avatar_svg__d)"></path>
+                                            <path fill="#7F9799" d="m13.59 26.067 7.836-.983.983 7.836-7.836.983z"
+                                                mask="url(#avatar_svg__d)"></path>
+                                        </g>
+                                    </g>
+                                </svg>
+                                <div class="drop-title">
+                                    <div class="drop-tit">botircoders</div>
+                                    <div class="drop-sub">id: <span>219253631</span></div>
+                                </div>
+                            </div>
+                            <div class="lititle container my-2">
+                                Ваш профиль
+                            </div>
+                            <li><a class="dropdown-item" href="dashboard.html">Объявления</a></li>
+                            <li><a class="dropdown-item" href="sms.html">Сообщения</a></li>
+                            <li><a class="dropdown-item" href="payStory.html">Платежи и счёт OLX</a></li>
+                            <li><a class="dropdown-item" href="config.html">Настройки</a></li>
+                            <div class="lititle container my-2">
+                                Избранные:
+                            </div>
+                            <li><a class="dropdown-item" href="dashboard.html">Объявления <span>0</span></a></li>
+                            <li><a class="dropdown-item" href="#">Поиски <span>0</span></a></li>
+                            <li><a class="dropdown-item" href="index.html">Выйти</a></li>
+                        </ul>
+                    </div>
+                    <a href="new.html" class="btn-nav p-3 px-4 py-2">
+                        Подать объявление
+                    </a>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!-- Navbar end -->
+
+    <!-- Bottom navbar -->
+    <div class="nav-bottom">
+        <div class="bottom-nav">
+            <a href="index.html">
+                <i class="bi bi-house-door"></i>
+                <span>Главная</span>
+            </a>
+        </div>
+        <div class="bottom-nav">
+            <a href="favourites.html">
+                <i class="bi bi-heart"></i>
+                <span>Избранное</span>
+            </a>
+        </div>
+        <div class="bottom-nav">
+            <a href="new.html">
+                <i class="bi bi-plus-circle"></i>
+                <span>Создать</span>
+            </a>
+        </div>
+        <div class="bottom-nav">
+            <a href="sms.html">
+                <i class="fa-regular fa-comment"></i>
+                <span>Сообщения</span>
+            </a>
+        </div>
+        <div class="bottom-nav">
+            <a href="dashboard.html">
+                <i class="bi bi-person-fill"></i>
+                <span>Профиль</span>
+            </a>
+        </div>
+    </div>
+    <!-- Bottom navbar end -->
+
+    <!-- Slide -->
+    <!-- <img src="Assets/img/one.gif" class="home-slide"> -->
+    <!-- <div class="slide-assets"></div> -->
+
+    <div class="olxpr pt-5">
+        <div class="container">
+            <div class="olxprofil my-2">
+                <div class="dashboardtitle">Ваши объявления</div>
+                <div class="dashboard-righ">
+                    <div class="dashboard-right">
+                        <div class="sum">
+                            <div class="sum-balans">Баланс: <span>0</span> сум</div>
+                            <div class="sum-balans">Доступный баланс: <span>0</span> бонусов</div>
+                        </div>
+                        <div class="btn-submit">
+                            <button class="social-btn mx-3"> Пополнить кошелёк </button>
+                            <button class="butn social-btn">Купить пакет</button>
+                        </div>
+                    </div>
+                    <div class="dashboardmore">
+                        <a href="#" class="alertlink">
+                            <span class="alerttext">Узнать больше</span>
+                            <div class="alertdown"></div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="navlinks">
+                <a href="dashboard.html" class="navlinks-a ">Объявления</a>
+                <a href="sms.html" class="navlinks-a">Сообщения</a>
+                <a href="payStory.html" class="navlinks-a">Платежи и счёт OLX</a>
+                <a href="config.html" class="navlinks-a navactive">Настройки</a>
+            </div>
+        </div>
+    </div>
+    <br>
+    <div class="container">
+        <div class="config d-flex justify-content-center">
+            <div class="w-75">
+                <div class="accordion" id="accordionExample">
+                    <div class="accordion-item my-3 rounded">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#collapse1" aria-expanded="true" aria-controls="collapse1">
+                                Изменить контактные данные
+                            </button>
+                        </h2>
+                        <div id="collapse1" class="accordion-collapse collapse show" data-bs-parent="#accordionExample">
+                            <div class="accordion-body">
+                                <div class="accordion-input py-1">
+                                    <label>Выбрать город</label>
+                                    <input type="text" class="acc-inp">
+                                </div>
+                                <hr>
+                                <div class="accordion-input py-1">
+                                    <label>Контактное лицо</label>
+                                    <input type="text" class="acc-inp">
+                                </div>
+                                <hr>
+                                <div class="accordion-input py-1">
+                                    <label>Номер телефона</label>
+                                    <input type="text" class="acc-inp">
+                                </div>
+                                <div class="accordion-check py-3">
+                                    <input type="checkbox" class="acc-inp">
+                                    <span>Не показывать все объявления на странице моего объявления</span>
+                                </div>
+                                <button class="btn-save my-1 py-2 px-5">Сохранить</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item my-3 rounded">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#collapse2" aria-expanded="false" aria-controls="collapse2">
+                                Изменить пароль
+                            </button>
+                        </h2>
+                        <div id="collapse2" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                            <div class="accordion-body">
+                                <div class="accordion-input py-1">
+                                    <label>Текущий пароль *</label>
+                                    <input type="text" class="acc-inp">
+                                </div>
+                                <hr>
+                                <div class="accordion-input py-1">
+                                    <label>Новый пароль *</label>
+                                    <input type="text" class="acc-inp">
+                                </div>
+                                <button class="btn-save my-1 py-2 px-5">Изменить пароль</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item my-3 rounded">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#collapse3" aria-expanded="false" aria-controls="collapse3">
+                                Изменить email-адрес
+                            </button>
+                        </h2>
+                        <div id="collapse3" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                            <div class="accordion-body">
+                                <div class="accordion-input py-1">
+                                    <label>Ваш текущий пароль от OLX</label>
+                                    <input type="text" class="acc-inp">
+                                </div>
+                                <div class="accordion-input py-1">
+                                    <label>Новый email</label>
+                                    <input type="text" class="acc-inp">
+                                </div>
+
+                                <button class="btn-save my-1 py-2 px-5">Сохранить</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item my-3 rounded">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#collapse4" aria-expanded="false" aria-controls="collapse4">
+                                Уведомления
+                            </button>
+                        </h2>
+                        <div id="collapse4" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                            <div class="accordion-body acc-body">
+                                <div class="accordion-head py-3">
+                                    <div class="accordion-title"></div>
+                                    <div class="accordion-title1 mx-5">E-mail</div>
+                                    <div class="accordion-title1 mx-5">Телефон</div>
+                                </div>
+                                <hr>
+                                <div class="accordion-head py-3">
+                                    <div class="accordion-title">
+                                        <b>Советы от OLX.</b>
+                                        <span>Полезные советы, интересные предложения, рекомендации и новинки на
+                                            OLX</span>
+                                    </div>
+                                    <div class="accordion-title1 mx-5">
+                                        <input type="checkbox">
+                                    </div>
+                                    <div class="accordion-title1 mx-5">
+                                        <input type="checkbox">
+                                    </div>
+                                </div>
+                                <hr>
+                                <div class="accordion-head py-3">
+                                    <div class="accordion-title">
+                                        <b>Акции.</b>
+                                        <span>Персональные скидки и специальные предложения</span>
+                                    </div>
+                                    <div class="accordion-title1 mx-5">
+                                        <input type="checkbox">
+                                    </div>
+                                    <div class="accordion-title1 mx-5">
+                                        <input type="checkbox">
+                                    </div>
+                                </div>
+                                <hr>
+                                <div class="accordion-head py-3">
+                                    <div class="accordion-title">
+                                        <b>Сообщения.</b>
+                                        <span>Новые ответы на объявления</span>
+                                    </div>
+                                    <div class="accordion-title1 mx-5">
+                                        <input type="checkbox">
+                                    </div>
+                                    <div class="accordion-title1 mx-5">
+                                        <input type="checkbox">
+                                    </div>
+                                </div>
+                                <hr>
+                                <div class="accordion-head py-3">
+                                    <div class="accordion-title">
+                                        <b>Новые объявления.</b>
+                                        <span>Новые предложения в Избранных поисках</span>
+                                    </div>
+                                    <div class="accordion-title1 mx-5">
+                                        <input type="checkbox">
+                                    </div>
+                                    <div class="accordion-title1 mx-5">
+                                        <input type="checkbox">
+                                    </div>
+                                </div>
+                                <hr>
+                                <div class="accordion-head py-3">
+                                    <div class="accordion-title">
+                                        <b>Скидка на товар.</b>
+                                        <span>Снижение цены на объявление, добавленное в Избранные</span>
+                                    </div>
+                                    <div class="accordion-title1 mx-5">
+                                        <input type="checkbox">
+                                    </div>
+                                    <div class="accordion-title1 mx-5">
+                                        <input type="checkbox">
+                                    </div>
+                                </div>
+                                <hr>
+                                <button class="btn-save my-1 py-2 px-5">Сохранить</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item my-3 rounded">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#collapse6" aria-expanded="false" aria-controls="collapse6">
+                                Удалить учетную запись
+                            </button>
+                        </h2>
+                        <div id="collapse6" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                            <div class="accordion-body d-flex justify-content-center py-5">
+                                <button class="btn-save px-5 py-2">Удалить учетную запись</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <br>
+    <!-- Footer -->
+    <footer class="py-5">
+        <div class="container">
+            <div class="col-3 d-flex flex-column align-items-start py-5 ">
+                <a href="#">Мобильные приложения</a>
+                <a href="#">Помощь и Обратная связь</a>
+                <a href="#">Платные услуги</a>
+                <a href="#">Бизнес на OLX</a>
+                <a href="#">Условия использования</a>
+                <a href="#">Политика конфиденциальности</a>
+            </div>
+            <div class="col-3 d-flex flex-column align-items-start py-5 ">
+                <a href="#">Правила безопасности</a>
+                <a href="#">Карта сайта</a>
+                <a href="#">Карта регионов</a>
+                <a href="#">Популярные запросы</a>
+                <a href="#">Работа в OLX</a>
+                <a href="#">Как продавать и покупать?</a>
+                <a href="#">Контакт</a>
+            </div>
+            <div class="col-3 col-col py-5 ">
+                <div class="col-main">
+                    <a href="" class="hrefcol1 mx-1">
+                        <img src="https://www.olx.uz/app/static/media/google_play.8cb1ced49.svg" alt="">
+                    </a>
+                    <a href="" class="hrefcol2 mx-1">
+                        <img src="https://www.olx.uz/app/static/media/app_store.156ac6d41.svg" alt="">
+                    </a>
+                </div>
+                <span class="colspan my-4">Бесплатное приложение для твоего телефона</span>
+                <div class="colsp">
+                    <div class="colspan2 text-center my-4"><span class="fw-bold">Google play</span> <br>
+                        <span>Download</span>
+                    </div>
+                    <span class="colspan3 text-center my-4"><span class="fw-bold">App store</span><br>
+                        <span>Download</span>
+                    </span>
+                </div>
+            </div>
+        </div>
+        <div class="respublic container pb-5">
+            <a href="olx.bg" class="px-2">
+                <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 16 16" class="css-d7r8uj">
+                    <defs>
+                        <filter id="bulgariaFlag_svg__a" width="150%" height="172.7%" x="-25%" y="-36.4%"
+                            filterUnits="objectBoundingBox">
+                            <feOffset dy="1" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset>
+                            <feGaussianBlur in="shadowOffsetOuter1" result="shadowBlurOuter1" stdDeviation="0.5">
+                            </feGaussianBlur>
+                            <feColorMatrix in="shadowBlurOuter1" result="shadowMatrixOuter1"
+                                values="0 0 0 0 0.407843137 0 0 0 0 0.407843137 0 0 0 0 0.407843137 0 0 0 0.3 0">
+                            </feColorMatrix>
+                            <feMerge>
+                                <feMergeNode in="shadowMatrixOuter1"></feMergeNode>
+                                <feMergeNode in="SourceGraphic"></feMergeNode>
+                            </feMerge>
+                        </filter>
+                    </defs>
+                    <g fill="none" fill-rule="evenodd" filter="url(#bulgariaFlag_svg__a)" transform="translate(0 3)">
+                        <path fill="#458853" d="M0 .011h16v10.666H0z"></path>
+                        <path fill="#FFF" d="M0 .011h16v3.555H0z"></path>
+                        <path fill="#E42828" d="M0 7.122h16v3.555H0z"></path>
+                    </g>
+                </svg>
+                OLX.bg
+            </a>
+            <a href="olx.pl" class="px-2">
+                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1em"
+                    height="1em" viewBox="0 0 16 16" class="css-d7r8uj">
+                    <defs>
+                        <filter id="polandFlag_svg__a" width="137.5%" height="154.5%" x="-18.8%" y="-27.3%"
+                            filterUnits="objectBoundingBox">
+                            <feMorphology in="SourceAlpha" operator="dilate" radius="0.5" result="shadowSpreadOuter1">
+                            </feMorphology>
+                            <feOffset in="shadowSpreadOuter1" result="shadowOffsetOuter1"></feOffset>
+                            <feGaussianBlur in="shadowOffsetOuter1" result="shadowBlurOuter1" stdDeviation="0.5">
+                            </feGaussianBlur>
+                            <feColorMatrix in="shadowBlurOuter1"
+                                values="0 0 0 0 0.304772418 0 0 0 0 0.304772418 0 0 0 0 0.304772418 0 0 0 0.169826267 0">
+                            </feColorMatrix>
+                        </filter>
+                        <path id="polandFlag_svg__b" d="M0 3h16v11H0z"></path>
+                    </defs>
+                    <g fill="none" fill-rule="evenodd">
+                        <use fill="#000" filter="url(#polandFlag_svg__a)" xlink:href="#polandFlag_svg__b"></use>
+                        <use fill="#DF1111" xlink:href="#polandFlag_svg__b"></use>
+                        <path fill="#FFF" d="M0 3h16v6H0z"></path>
+                    </g>
+                </svg>
+                OLX.pl
+            </a>
+            <a href="olx.ro" class="px-2">
+                <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 16 16" class="css-d7r8uj">
+                    <defs>
+                        <filter id="romaniaFlag_svg__a" width="150%" height="172.7%" x="-25%" y="-36.4%"
+                            filterUnits="objectBoundingBox">
+                            <feOffset dy="1" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset>
+                            <feGaussianBlur in="shadowOffsetOuter1" result="shadowBlurOuter1" stdDeviation="0.5">
+                            </feGaussianBlur>
+                            <feColorMatrix in="shadowBlurOuter1" result="shadowMatrixOuter1"
+                                values="0 0 0 0 0.407523777 0 0 0 0 0.407523777 0 0 0 0 0.407523777 0 0 0 0.304113855 0">
+                            </feColorMatrix>
+                            <feMerge>
+                                <feMergeNode in="shadowMatrixOuter1"></feMergeNode>
+                                <feMergeNode in="SourceGraphic"></feMergeNode>
+                            </feMerge>
+                        </filter>
+                    </defs>
+                    <g fill="none" fill-rule="evenodd" filter="url(#romaniaFlag_svg__a)" transform="translate(0 3)">
+                        <path fill="#FCDD0E" d="M0 .01h16v10.666H0z"></path>
+                        <path fill="#040677" d="M0 .01h5.333v10.667H0z"></path>
+                        <path fill="#EC0B0B" d="M10.667.01H16v10.667h-5.333z"></path>
+                    </g>
+                </svg>
+                OLX.ro
+            </a>
+            <a href="olx.ua" class="px-2">
+                <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 16 16" class="css-d7r8uj">
+                    <defs>
+                        <filter id="ukraineFlag_svg__a" width="150%" height="172.7%" x="-25%" y="-36.4%"
+                            filterUnits="objectBoundingBox">
+                            <feOffset dy="1" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset>
+                            <feGaussianBlur in="shadowOffsetOuter1" result="shadowBlurOuter1" stdDeviation="0.5">
+                            </feGaussianBlur>
+                            <feColorMatrix in="shadowBlurOuter1" result="shadowMatrixOuter1"
+                                values="0 0 0 0 0.407843137 0 0 0 0 0.407843137 0 0 0 0 0.407843137 0 0 0 0.3 0">
+                            </feColorMatrix>
+                            <feMerge>
+                                <feMergeNode in="shadowMatrixOuter1"></feMergeNode>
+                                <feMergeNode in="SourceGraphic"></feMergeNode>
+                            </feMerge>
+                        </filter>
+                    </defs>
+                    <g fill="none" fill-rule="evenodd" filter="url(#ukraineFlag_svg__a)" transform="translate(0 3)">
+                        <path fill="#F7D210" d="M0 .011h16v10.666H0z"></path>
+                        <path fill="#1762E7" d="M0 .011h16v5.333H0z"></path>
+                    </g>
+                </svg>
+                OLX.ua
+            </a>
+            <a href="olx.pt" class="px-2">
+                <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 16 16" class="css-d7r8uj">
+                    <defs>
+                        <filter id="portugalFlag_svg__a" width="150%" height="172.7%" x="-25%" y="-36.4%"
+                            filterUnits="objectBoundingBox">
+                            <feOffset dy="1" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset>
+                            <feGaussianBlur in="shadowOffsetOuter1" result="shadowBlurOuter1" stdDeviation="0.5">
+                            </feGaussianBlur>
+                            <feColorMatrix in="shadowBlurOuter1" result="shadowMatrixOuter1"
+                                values="0 0 0 0 0.407843137 0 0 0 0 0.407843137 0 0 0 0 0.407843137 0 0 0 0.3 0">
+                            </feColorMatrix>
+                            <feMerge>
+                                <feMergeNode in="shadowMatrixOuter1"></feMergeNode>
+                                <feMergeNode in="SourceGraphic"></feMergeNode>
+                            </feMerge>
+                        </filter>
+                    </defs>
+                    <g fill="none" fill-rule="evenodd" filter="url(#portugalFlag_svg__a)" transform="translate(0 3)">
+                        <path fill="#F71111" d="M0 .011h16v10.666H0z"></path>
+                        <path fill="#288703" d="M6.145.011v10.666H0V.011z"></path>
+                        <circle cx="6.145" cy="5.344" r="2" fill="#F8D80C"></circle>
+                        <path fill="#F71111" d="M5.02 4.344v1.25a1.125 1.125 0 0 0 2.25 0v-1.25H5.02z"></path>
+                        <path fill="#F0F0F0" fill-rule="nonzero"
+                            d="M6.145 5.969a.375.375 0 0 1-.375-.375v-.5h.75v.5a.375.375 0 0 1-.375.375z"></path>
+                    </g>
+                </svg>
+                OLX.pt
+            </a>
+        </div>
+    </footer>
+    </div>
+    <!-- Footer end -->
+
+    <!-- Script -->
+
+    <script src="JS/script.js"></script>
+    <!-- Script end -->
+</body>
+
+</html>

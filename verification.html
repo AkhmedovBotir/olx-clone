@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="CSS/login.css">
+    <link rel="stylesheet" href="CSS/style.css">
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.11.3/font/bootstrap-icons.min.css"
+        integrity="sha512-dPXYcDub/aeb08c63jRq/k6GaKccl256JQy/AnOq7CAnEZ9FzSL9wSbcZkMp4R26vBsMLFYH4kQ67/bbV8XaCQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+    <div class="bg-animation">
+        <div class="animat"></div>
+        <div class="login">
+
+            <!-- Login body -->
+
+            <form class="login-main">
+                <a href="login.html" class="login-back">
+                    <i class="bi bi-chevron-left"></i>
+                </a>
+                <h1>Установить новый пароль</h1>
+                <h5>Нам нужно убедиться, что это действительно вы. Введите код подтверждения, который мы отправили в SMS
+                    на ваш телефон.</h5>
+                <div class="login-input">
+                    <label for="input">Код подтверждения</label>
+                    <input type="password" required>
+                </div>
+                <div class="alertlinks">
+                    <button class="alertlink">
+                        <span class="alerttext">Отправить новый код</span>
+                        <div class="alertdown"></div>
+                    </button>
+                </div>
+                <div class="login-input">
+                    <label for="input">Введите новый пароль</label>
+                    <input type="password" required>
+                </div>
+                <div class="form-sub subs">
+                    <span>Пароль должен содержать минимум 8 символов.
+                        Для надeжности пароля добавьте заглавные и строчные буквы, цифры и символы. Например, @!€=.</span>
+                </div>
+                <div class="btn-submit">
+                    <button type="submit">Подтвердить новый пароль</button>
+                    <!-- keyngi sahifani ko'rib olish uchun -->
+                    <a href="recoveryVerification.html">Keyingi sahifani ko'rish</a>
+                </div>
+            </form>
+
+            <!-- Login body end -->
+
+        </div>
+    </div>
+
+</body>
+
+</html>

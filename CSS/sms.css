@@ -1,0 +1,279 @@
+.sms {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.sms-users {
+    width: 38%;
+}
+
+.sms-content {
+    width: 60%;
+}
+
+.sms-users,
+.sms-content {
+    background-color: #fff;
+    border-radius: 5px;
+}
+
+.nosms-title {
+    display: flex;
+    justify-content: end;
+}
+
+.noadsp {
+    font-weight: 700;
+}
+
+.noadsp,
+.noadsp1 {
+    border: transparent 1px solid;
+    background-color: transparent;
+    font-size: .9rem;
+}
+
+.aspactive {
+    background-color: aqua;
+    padding: .5rem 1rem;
+    border-radius: 5px;
+}
+
+.nosvg,
+.nosps>span {
+    font-size: 1rem;
+}
+
+.nosmsprofconts,
+.nosmsprofcont1,
+.nosmsprofcont {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    height: 100%;
+}
+
+.nosmsprofil {
+    height: 80vh;
+}
+
+.smsProfilTitle{
+    font-size: 1.3rem;
+    font-weight: 700;
+    margin: .5rem 1rem;
+}
+
+.nosmsprofconts>.nocontent-sub,
+.nosmsprofcont1>.nocontent-sub,
+.nosmsprofcont>.nocontent-sub {
+    font-size: 1rem;
+}
+
+.nosmsprofconts>.nocontent-sub>a,
+.nosmsprofcont1>.nocontent-sub>a,
+.nosmsprofcont>.nocontent-sub>a {
+    text-decoration: none;
+}
+
+.smsprofil {
+    width: 100%;
+    height: 70vh;
+    overflow-y: scroll;
+    display: flex;
+    flex-direction: column;
+}
+
+.smsprofilcontent {
+    margin: 1vh 0;
+    padding: 1vh;
+    border: 0 solid transparent;
+    border-bottom: 1px solid #000;
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.smsprofilcontent:hover {
+    transition: all .5s ease;
+    margin: 1vh 0;
+    padding: 1vh;
+    border: 0 solid transparent;
+    border-bottom: 1px solid #000;
+    width: 100%;
+    display: flex;
+    background-color: #8ae5e96b;
+    justify-content: space-evenly;
+}
+
+.smsprofilicon {
+    width: 7vh;
+    border-radius: 50rem;
+}
+
+.smsprofsms {
+
+    font-size: 0.8rem;
+    font-weight: 700;
+}
+
+.smsprofs,
+.smsproftitle {
+    font-size: 0.8rem;
+}
+
+.useraccount {
+    text-decoration: none;
+    font-weight: 700;
+}
+
+.useraccount>img {
+    width: 30px;
+    height: 30px;
+    border-radius: 50rem;
+}
+
+.acctitle {
+    margin-left: 10px;
+}
+
+.backsms>i,
+.savechat>svg {
+    width: 25px;
+    height: 25px;
+    font-size: 25px;
+}
+
+.smschatads {
+    /* padding: 2vh 0; */
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.smsadsimg {
+    width: 7vh;
+}
+
+.smschattext {
+    text-decoration: none;
+    width: 75%;
+}
+
+.smschatsub {
+    font-weight: 700;
+}
+
+.chatid {
+    font-size: .8rem;
+    font-weight: 400;
+}
+
+.smschatbody {
+    overflow-y: scroll;
+    height: 50vh;
+}
+
+.smschatright {
+    display: flex;
+    justify-content: end;
+}
+
+.smschatuser {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+    /* justify-content: end; */
+    padding: 0 1vh;
+}
+
+.smschatus {
+    border-top-left-radius: 15px;
+    border-bottom-left-radius: 15px;
+    border-top-right-radius: 15px;
+    background: rgb(206, 221, 255);
+    padding: 1.5vh;
+}
+
+.smschattime {
+    font-size: 0.8rem;
+}
+
+.smschatleft {
+    width: 100%;
+    display: flex;
+    justify-content: start;
+}
+
+.smschatuserr {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    width: 50%;
+}
+
+.smschater {
+    padding: 1.5vh;
+    border-top-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+    border-top-right-radius: 15px;
+    background-color: rgb(35, 229, 219);
+}
+
+.filesmsbtn,
+.filesms {
+    width: 25px;
+    height: 25px;
+}
+
+.filesmsbtn {
+    background-color: transparent;
+    border: transparent 0;
+}
+.smschat{
+    display: none;
+}
+
+.smschatinput{
+    display: flex;
+    justify-content: start;
+    width: 100%;
+}
+.smschatinp{
+    padding: 5px 10px;
+    width: 90%;
+    height: auto;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+    border: #002F34 solid 2px;
+}
+.smschatbtn{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 10%;
+    background-color: #002F34;
+    border: none;
+    border-radius: 0;
+}
+.smschatbtn:hover{
+    transition: all ease-in-out .5s;
+    opacity: .8;
+}
+.smschatbtn > svg > path{
+    color: #fff !important;
+}
+
+@media (max-width: 768px) {
+    .smsadsimg{
+        width: 30px;
+        height: 30px;
+    }
+    .smschatads{
+        align-items: center;
+    }
+}

@@ -1,0 +1,201 @@
+.paynum {
+    width: 48px;
+    height: 48px;
+    background: #002F34;
+    border-radius: 50%;
+    font-weight: 700;
+    font-size: 1.3rem;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 20px;
+}
+
+.paytitle {
+    display: flex;
+    align-items: center;
+    color: #002F34;
+    font-size: 1.3rem;
+}
+
+.paysub {
+    border-radius: 5px;
+    background-color: rgb(206, 221, 255);
+    display: flex;
+    align-items: center;
+    width: 68%;
+    font-size: .9rem;
+}
+
+.paysub>img {
+    margin-right: 20px;
+}
+
+.togleform {
+    display: flex;
+    justify-content: space-between;
+}
+
+.paysubmit {
+    width: 35vh;
+    display: flex;
+    justify-content: space-between;
+}
+
+.toggle-box {
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 10px;
+    margin-bottom: 10px;
+    cursor: pointer;
+}
+
+.toggle-label {
+    font-weight: bold;
+}
+
+input[type="radio"]:checked~.toggle-box {
+    border: #002F34 solid 2px !important;
+    background-color: #002F34 !important;
+}
+
+.oldpaym {
+    border-radius: 5px;
+    background-color: #fff;
+}
+
+.paynumold {
+    width: 48px;
+    height: 48px;
+    background: rgb(216, 223, 224);
+    ;
+    border-radius: 50%;
+    font-weight: 700;
+    font-size: 1.3rem;
+    color: rgb(127, 151, 153);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 20px;
+}
+
+.oldpaym {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.oldleft {
+    display: flex;
+    align-items: center;
+}
+
+.oldleft>a {
+    margin-left: 20px;
+}
+
+.oldright {
+    font-weight: 700;
+}
+
+.radio-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.radio-menu>label,
+.cont {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 20vh;
+    height: 15vh;
+    font-size: 1.3rem;
+}
+.radio-menu{
+    border: transparent 0px solid;
+}
+
+.radio-menu > label{
+    background-color: #fff;
+    border: 1px solid #ccc;
+}
+
+
+.cont>svg,
+.provider-paycom {
+    font-size: 5rem;
+    width: 50px;
+    height: 50px;
+}
+
+.cont>span {
+    font-weight: 700;
+    margin-top: 10px;
+}
+
+input[type="radio"] {
+    display: none;
+}
+
+input[type="radio"]+label {
+    cursor: pointer;
+    border-radius: 5px;
+    margin-bottom: 5px;
+    transition: ease all 0.3s;
+    font-weight: 700;
+}
+
+input[type="radio"]+label:hover {
+    background-color: #f0f0f0;
+}
+
+input[type="radio"]:checked+label {
+    border: 1px solid #007bff;
+    /* color: white; */
+}
+
+.content {
+    display: none;
+}
+
+input[type="radio"]:checked~.content {
+    display: block;
+}
+.sumtext{
+    color: #002F34;
+    text-align: right;
+    width: 100%;
+    display: flex;
+    justify-content: end;
+}
+.summ{
+    margin-left: 10px;
+}
+
+
+.paysubmits{
+    background-color: #fff;
+    border-radius: 5px;
+    display: flex;
+    justify-content: flex-end;
+}
+.sumtext{
+    font-size: 2rem;
+}
+@media (max-width: 480px){
+    .radio-container{
+        flex-wrap: wrap;
+        font-size: .7rem !important;
+    }
+    .oldpaym {
+        font-size: .7rem;
+        flex-wrap: wrap;
+    }
+    .sumtext{
+        font-size: .7rem;
+    }
+}

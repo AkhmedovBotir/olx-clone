@@ -1,0 +1,655 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OLX</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/11.0.5/swiper-bundle.css"
+        integrity="sha512-pmAAV1X4Nh5jA9m+jcvwJXFQvCBi3T17aZ1KWkqXr7g/O2YMvO8rfaa5ETWDuBvRq6fbDjlw4jHL44jNTScaKg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.11.3/font/bootstrap-icons.min.css"
+        integrity="sha512-dPXYcDub/aeb08c63jRq/k6GaKccl256JQy/AnOq7CAnEZ9FzSL9wSbcZkMp4R26vBsMLFYH4kQ67/bbV8XaCQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+        integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="CSS/style.css">
+</head>
+
+<body class="favourites">
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg">
+        <div class="container d-flex justify-content-between">
+            <a class="navbar-brand" href="index.html">
+                <img src="Assets/img/logo.png" />
+            </a>
+
+            <div class="d-flex justify-content-end flex-row ">
+                <ul class="navbar-nav mb-2 mb-lg-0">
+                    <li class="nav-item mx-3">
+                        <a class="nav-link " aria-current="page" href="sms.html">
+                            <i class="fa-regular fa-comment"></i>
+                            Сообщения</a>
+                    </li>
+                    <div class="nav-cont mx-3 d-flex align-items-center">
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">O'Z</a>
+                        </li>
+                        |
+                        <li class="nav-item">
+                            <a class="nav-link active" href="#">РУ </a>
+                        </li>
+                    </div>
+                    <a class="nav-link " aria-current="page" href="favourites.html">
+                        <i class="fa-regular fa-heart mx-3"></i>
+                    </a>
+                    <div class="account mx-3">
+                        <a class="nav-link " aria-current="page" href="login.html">
+                            <i class="fa-regular fa-user "></i>
+                            Ваш профиль
+                        </a>
+                    </div>
+                    <a href="new.html" class="btn-nav p-3 px-4 py-2">
+                        Подать объявление
+                    </a>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!-- Navbar end -->
+
+    <!-- Bottom navbar -->
+    <div class="nav-bottom">
+        <div class="bottom-nav">
+            <a href="index.html">
+                <i class="bi bi-house-door-fill"></i>
+                <span>Главная</span>
+            </a>
+        </div>
+        <div class="bottom-nav">
+            <a href="favourites.html">
+                <i class="bi bi-heart"></i>
+                <span>Избранное</span>
+            </a>
+        </div>
+        <div class="bottom-nav">
+            <a href="new.html">
+                <i class="bi bi-plus-circle"></i>
+                <span>Создать</span>
+            </a>
+        </div>
+        <div class="bottom-nav">
+            <a href="sms.html">
+                <i class="fa-regular fa-comment"></i>
+                <span>Сообщения</span>
+            </a>
+        </div>
+        <div class="bottom-nav">
+            <a href="dashboard.html">
+                <i class="bi bi-person"></i>
+                <span>Профиль</span>
+            </a>
+        </div>
+    </div>
+    <!-- Bottom navbar end -->
+
+    <!-- Search -->
+    <div class="csearch">
+        <div class="container">
+            <div class="search-div py-5">
+                <div class="search-main container-fluid mt-4 ">
+                    <div class="input-main col-7 px-3 py-4">
+                        <i class="fa-solid fa-magnifying-glass mx-1"></i>
+                        <input type="text" class="search-input" placeholder="Что ищете?">
+                    </div>
+                    <div class="input-main-location col-3 px-3 py-4">
+                        <i class="bi bi-geo-alt mx-1"></i>
+                        <input type="text" class="search-input" placeholder="Вся страна">
+                    </div>
+                    <button class="button-search col-2 search-button">
+                        <span>Поиск</span>
+                        <i class="fa-solid fa-magnifying-glass mx-1"></i>
+                    </button>
+                    <a href="#" class="search-notf">
+                        <i class="bi bi-bell"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Search end -->
+
+    <!-- Breadcrumb -->
+    <div class="container">
+        <div class="breadcrumbs py-4">
+            <a href="index.html" class="breadcrumb-back">
+                <i class="bi bi-chevron-left"></i>
+                <span>Назад</span>
+            </a>
+            <nav aria-label="breadcrumb">
+                <ol class="breadcrumb">
+                    <li class="breadcrumb-item"><a href="index.html">Главная</a></li>
+                    <li class="breadcrumb-item active" aria-current="page">Объявление</li>
+                </ol>
+            </nav>
+        </div>
+    </div>
+    <!-- Breadcrumb end -->
+
+    <!-- Ads -->
+    <div class="container">
+        <div class="ads-row">
+            <div class="ads-col col-8">
+                <div id="carouselExampleIndicators" class="carousel slide">
+                    <div class="carousel-indicators">
+                        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0"
+                            class="active" aria-current="true" aria-label="Slide 1"></button>
+                        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"
+                            aria-label="Slide 2"></button>
+                        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"
+                            aria-label="Slide 3"></button>
+                        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="3"
+                            aria-label="Slide 4"></button>
+                        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="4"
+                            aria-label="Slide 5"></button>
+                        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="5"
+                            aria-label="Slide 6"></button>
+                        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="6"
+                            aria-label="Slide 7"></button>
+                        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="7"
+                            aria-label="Slide 8"></button>
+                    </div>
+                    <div class="ads-carousel">
+                        <div class="carousel-inner">
+                            <div class="carousel-item active">
+                                <img src="https://frankfurt.apollo.olxcdn.com/v1/files/424hllsvgxsy1-UZ/image;s=1000x700"
+                                    class="d-block w-100" alt="...">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="https://frankfurt.apollo.olxcdn.com/v1/files/wtb2ld9e9tg31-UZ/image;s=1000x700"
+                                    class="d-block w-100" alt="...">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="https://frankfurt.apollo.olxcdn.com/v1/files/9stn6zd7k0iy2-UZ/image;s=1000x700"
+                                    class="d-block w-100" alt="...">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="https://frankfurt.apollo.olxcdn.com/v1/files/2zx9a5ojbtfg2-UZ/image;s=1000x700"
+                                    class="d-block w-100" alt="...">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="https://frankfurt.apollo.olxcdn.com/v1/files/zs0n9xvu833c3-UZ/image;s=1000x700"
+                                    class="d-block w-100" alt="...">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="https://frankfurt.apollo.olxcdn.com/v1/files/09f8wry61lej3-UZ/image;s=1000x700"
+                                    class="d-block w-100" alt="...">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="https://frankfurt.apollo.olxcdn.com/v1/files/0gj2n6vwbmr2-UZ/image;s=1000x700"
+                                    class="d-block w-100" alt="...">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="https://frankfurt.apollo.olxcdn.com/v1/files/e90bjz2fqfj52-UZ/image;s=1000x700"
+                                    class="d-block w-100" alt="...">
+                            </div>
+                        </div>
+                    </div>
+                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"
+                        data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true">
+                            <i class="bi bi-chevron-left"></i>
+                        </span>
+                        <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators"
+                        data-bs-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true">
+                            <i class="bi bi-chevron-right"></i>
+                        </span>
+                        <span class="visually-hidden">Next</span>
+                    </button>
+                </div>
+                <div class="ads-slide-menu">
+                    <div class="adsmenu">
+                        <a href="#" class="adsmen">
+                            <div class="adsmenusvg">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 25 24"
+                                    class="css-1061x0u">
+                                    <path fill="currentColor" fill-rule="evenodd"
+                                        d="m20 3 1 1v16l-1 1h-1l-6.5-6.5L6 21H5l-1-1V4l1-1h15zm-1.667 2H6.778L6 5.778v12.444L13 12l6 6.222V5.778L18.333 5z">
+                                    </path>
+                                </svg>
+                            </div>
+                            <span>РЕКЛАМИРОВАТЬ</span>
+                        </a>
+                        <a href="#" class="adspod">
+                            <div class="adspodsvg">
+                                <svg width="1em" height="1em" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"
+                                    class="css-1061x0u">
+                                    <path
+                                        d="M17.65 6.35A7.958 7.958 0 0 0 12 4c-4.42 0-7.99 3.58-7.99 8s3.57 8 7.99 8c3.73 0 6.84-2.55 7.73-6L19 13l-1.35 1A5.99 5.99 0 0 1 12 18c-3.31 0-6-2.69-6-6s2.69-6 6-6c1.66 0 3.14.69 4.22 1.78L15 9l5 1-1-5"
+                                        fill="currentColor" fill-rule="evenodd"></path>
+                                </svg>
+                            </div>
+                            <span>ПОДНЯТЬ</span>
+                        </a>
+                    </div>
+                    <br>
+                    <span class="adsmenubtn">Бизнес </span>
+                    <br>
+                    <h4 class="ads-h1">ОПИСАНИЕ</h4>
+                    <div class="ads-spansub">
+                        Premier_natyajnie_potolki sizlarga oz hizmatlarini taklif qiladi.
+                        Tortma shiftlar 3D uloqsiz gul qogozlar.
+                        Istalgan korinishdagi ranglar va naqsh gul turlari
+                        Uzoq yillik kafolat hamda qoshimcha chegirmalar
+                        Eng sifatli materiallardan foydalangan holda ishimizni alo darajada bajaramiz
+                        Dizayner ishlari va konsultatsia bepul hoziroq qongiroq qiling 903333393
+                    </div>
+                    <hr>
+                    <div class="adssub">
+                        <span>ID: 43303606</span>
+                        <span>Просмотров: 2016</span>
+                        <div class="adsspam">
+                            <svg width="1em" height="1em" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"
+                                class="css-1gijuq4">
+                                <path
+                                    d="M17.421 13H5V4h12.421l-2.124 3.452-.645 1.048.645 1.049L17.421 13zm1.79-11H3v19l1 1 1-1v-6h14.211l.851-1.523L17 8.5l3.062-4.976L19.211 2z"
+                                    fill="currentColor" fill-rule="evenodd"></path>
+                            </svg>
+                            <a href="#" class="ads-link alertlink">
+                                <span class="alerttext">Пожаловаться</span>
+                                <div class="alertdown"></div>
+                            </a>
+                        </div>
+                    </div>
+                    <br>
+                </div>
+                <div class="adscontact d-flex justify-content-between">
+                    <div class="adscont-tite">
+                        <span class="fw-bold">СВЯЗАТЬСЯ С ПРОДАВЦОМ</span>
+                        <div class="adspre d-flex justify-content-between">
+                            <a href="#" class="adsuser">
+                                <div class="adsusermenu my-4 d-flex justify-content-start align-items-center">
+                                    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                                        width="1em" height="1em" viewBox="0 0 71 71"
+                                        data-testid="user-photo-placeholder" alt="User avatar" class="css-11963t">
+                                        <defs>
+                                            <path id="avatar_svg__a"
+                                                d="M.029 34.9c0 19.272 15.623 34.896 34.896 34.896 19.273 0 34.896-15.624 34.896-34.897C69.821 15.627 54.198.003 34.925.003 15.652.003.03 15.627.03 34.9">
+                                            </path>
+                                            <path id="avatar_svg__c"
+                                                d="M0 34.99c0 19.272 15.624 34.896 34.896 34.896 19.273 0 34.896-15.624 34.896-34.896C69.792 15.717 54.17.094 34.896.094 15.624.094 0 15.717 0 34.99z">
+                                            </path>
+                                        </defs>
+                                        <g fill="none" fill-rule="evenodd">
+                                            <g transform="translate(.903 .903)">
+                                                <mask id="avatar_svg__b" fill="#fff">
+                                                    <use xlink:href="#avatar_svg__a"></use>
+                                                </mask>
+                                                <path fill="#3A77FF"
+                                                    d="M69.821 34.9c0 19.272-15.623 34.896-34.896 34.896C15.652 69.796.03 54.172.03 34.899.029 15.627 15.652.003 34.925.003c19.273 0 34.896 15.624 34.896 34.896"
+                                                    mask="url(#avatar_svg__b)"></path>
+                                            </g>
+                                            <g transform="translate(.932 .906)">
+                                                <mask id="avatar_svg__d" fill="#fff">
+                                                    <use xlink:href="#avatar_svg__c"></use>
+                                                </mask>
+                                                <use fill="#D8DFE0" xlink:href="#avatar_svg__c"></use>
+                                                <path fill="#406367" d="M10.788 98.23h48.216V50.013H10.788z"
+                                                    mask="url(#avatar_svg__d)"></path>
+                                                <path fill="#EBEEEF"
+                                                    d="M53.436 34.896c0 10.24-8.3 18.54-18.54 18.54-10.239 0-18.54-8.3-18.54-18.54 0-10.239 8.301-18.54 18.54-18.54 10.24 0 18.54 8.301 18.54 18.54"
+                                                    mask="url(#avatar_svg__d)"></path>
+                                                <path fill="#7F9799"
+                                                    d="M44.812 27.96c-3.975 5.115-11.344 6.04-16.46 2.065-5.115-3.975-6.04-11.344-2.065-16.46 3.975-5.115 11.344-6.04 16.46-2.065 5.116 3.975 6.04 11.344 2.065 16.46"
+                                                    mask="url(#avatar_svg__d)"></path>
+                                                <path fill="#7F9799"
+                                                    d="m44.547 28.301-9.604-7.462 7.463-9.604 9.603 7.462zm-30.922-1.955a7.617 7.617 0 1 1 15.115-1.897 7.617 7.617 0 0 1-15.115 1.897"
+                                                    mask="url(#avatar_svg__d)"></path>
+                                                <path fill="#7F9799" d="m13.59 26.067 7.836-.983.983 7.836-7.836.983z"
+                                                    mask="url(#avatar_svg__d)"></path>
+                                            </g>
+                                        </g>
+                                    </svg>
+                                    <div class="adsuser-text">
+                                        <span class="adsuser-title">P R E M I E R</span>
+                                        <div class="adsuser-sub">
+                                            на OLX с
+                                            <b>январь 2022 г.</b>
+                                        </div>
+                                        <div class="adsuser-sub">
+                                            Онлайн 05 марта 2024 г.
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                            <div class="adscontactbtns d-flex flex-column align-items-end">
+                                <button class="btn ads-sub1 w-50 text-center">Сообщение</button>
+                                <div class="py-1"></div>
+                                <div class="adscontbtns">
+                                    <div class="callads ">
+                                        <svg width="1em" height="1em" viewBox="0 0 24 24"
+                                            xmlns="http://www.w3.org/2000/svg" class="css-1jfo8do">
+                                            <path
+                                                d="M18.388 19.978C10.62 19.635 4.365 13.38 4.022 5.612l3.515-1.406 2.149 4.299-1.664.832v.62a6.029 6.029 0 0 0 6.021 6.021h.62l.278-.554.555-1.11 4.298 2.15-1.406 3.514zm3.13-4.897-6.022-3.011-1.347.45-.704 1.407a4.023 4.023 0 0 1-3.372-3.372l1.408-.704.449-1.346-3.01-6.022L7.65 2 2.63 4.007 2 4.94C2 14.347 9.654 22 19.061 22l.932-.63L22 16.35l-.483-1.27z"
+                                                fill="currentColor" fill-rule="evenodd"></path>
+                                        </svg>
+                                    </div>
+                                    <span class="calladsnum mx-3">XXX XXX XXX</span>
+                                    <span class="calladsnum1">903 333 393</span>
+                                    <button class="calladsnumbtn px-3">Показать телефон</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <br>
+            </div>
+            <div class="ads-col col-4 marginAds">
+                <div class="adscontact">
+                    <div class="adscontact-title">
+                        <div class="adsspan">
+                            Опубликовано сегодня в <span>10:32</span>
+                        </div>
+                        <i class="fa-regular fa-heart"></i>
+                    </div>
+                    <div class="adscontact-body">
+                        Натяжные потолки натяжной потолок natijnoy potolok natyajnie potolki
+                    </div>
+                    <div class="adscontact-sub">
+                        <button class="btn ads-sub1">Сообщение</button>
+                        <button class="ads-sub2">Показать телефон</button>
+                        <a href="tel:+998903333393" class="ads-sub3">903 333 393</a>
+                    </div>
+                </div>
+
+                <div class="sms-modal">
+                    <div class="sms-modal"></div>
+                </div>
+
+                <br>
+                <div class="ads-user">
+                    <div class="adscontact">
+                        <div class="ads-usertitle fw-bold">ПОЛЬЗОВАТЕЛЬ</div>
+                        <a href="#" class="adsuser">
+                            <div class="adsusermenu my-4 d-flex justify-content-start align-items-center">
+                                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                                    width="1em" height="1em" viewBox="0 0 71 71" data-testid="user-photo-placeholder"
+                                    alt="User avatar" class="css-11963t">
+                                    <defs>
+                                        <path id="avatar_svg__a"
+                                            d="M.029 34.9c0 19.272 15.623 34.896 34.896 34.896 19.273 0 34.896-15.624 34.896-34.897C69.821 15.627 54.198.003 34.925.003 15.652.003.03 15.627.03 34.9">
+                                        </path>
+                                        <path id="avatar_svg__c"
+                                            d="M0 34.99c0 19.272 15.624 34.896 34.896 34.896 19.273 0 34.896-15.624 34.896-34.896C69.792 15.717 54.17.094 34.896.094 15.624.094 0 15.717 0 34.99z">
+                                        </path>
+                                    </defs>
+                                    <g fill="none" fill-rule="evenodd">
+                                        <g transform="translate(.903 .903)">
+                                            <mask id="avatar_svg__b" fill="#fff">
+                                                <use xlink:href="#avatar_svg__a"></use>
+                                            </mask>
+                                            <path fill="#3A77FF"
+                                                d="M69.821 34.9c0 19.272-15.623 34.896-34.896 34.896C15.652 69.796.03 54.172.03 34.899.029 15.627 15.652.003 34.925.003c19.273 0 34.896 15.624 34.896 34.896"
+                                                mask="url(#avatar_svg__b)"></path>
+                                        </g>
+                                        <g transform="translate(.932 .906)">
+                                            <mask id="avatar_svg__d" fill="#fff">
+                                                <use xlink:href="#avatar_svg__c"></use>
+                                            </mask>
+                                            <use fill="#D8DFE0" xlink:href="#avatar_svg__c"></use>
+                                            <path fill="#406367" d="M10.788 98.23h48.216V50.013H10.788z"
+                                                mask="url(#avatar_svg__d)"></path>
+                                            <path fill="#EBEEEF"
+                                                d="M53.436 34.896c0 10.24-8.3 18.54-18.54 18.54-10.239 0-18.54-8.3-18.54-18.54 0-10.239 8.301-18.54 18.54-18.54 10.24 0 18.54 8.301 18.54 18.54"
+                                                mask="url(#avatar_svg__d)"></path>
+                                            <path fill="#7F9799"
+                                                d="M44.812 27.96c-3.975 5.115-11.344 6.04-16.46 2.065-5.115-3.975-6.04-11.344-2.065-16.46 3.975-5.115 11.344-6.04 16.46-2.065 5.116 3.975 6.04 11.344 2.065 16.46"
+                                                mask="url(#avatar_svg__d)"></path>
+                                            <path fill="#7F9799"
+                                                d="m44.547 28.301-9.604-7.462 7.463-9.604 9.603 7.462zm-30.922-1.955a7.617 7.617 0 1 1 15.115-1.897 7.617 7.617 0 0 1-15.115 1.897"
+                                                mask="url(#avatar_svg__d)"></path>
+                                            <path fill="#7F9799" d="m13.59 26.067 7.836-.983.983 7.836-7.836.983z"
+                                                mask="url(#avatar_svg__d)"></path>
+                                        </g>
+                                    </g>
+                                </svg>
+                                <div class="adsuser-text">
+                                    <span class="adsuser-title">P R E M I E R</span>
+                                    <div class="adsuser-sub">
+                                        на OLX с
+                                        <b>январь 2022 г.</b>
+                                    </div>
+                                    <div class="adsuser-sub">
+                                        Онлайн 05 марта 2024 г.
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                        <a href="user.html" class="adsuserads">
+                            Все объявления автора
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="1em" height="1em"
+                                class="css-d7r8uj">
+                                <path fill="currentColor" fill-rule="evenodd"
+                                    d="M7 2v1.414l1.271 1.27L15.586 12l-7.315 7.315L7 20.585V22h1.414l1.27-1.271L17 13.414l1-1v-.827l-3.942-3.942v-.001L9.686 3.271 8.413 2z">
+                                </path>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+                <br>
+                <div class="adscontact">
+                    <div class="ads-usertitle fw-bold">МЕСТОПОЛОЖЕНИЕ</div>
+                    <br>
+                    <div class="adslocation d-flex justify-content-between py-3">
+                        <div class="adsloc-title d-flex w-25">
+                            <i class="bi bi-geo-alt "></i>
+                            <div class="adsloc-tit">
+                                <b>Ташкент, Юнусабадский район</b>
+                                <span>Ташкентская область</span>
+                            </div>
+                        </div>
+                        <a href="#" class="adsloc">
+                            <img src="https://www.olx.uz/app/static/media/staticmap.65e20ad98.svg"
+                                alt="Ташкентская область, Ташкент, Юнусабадский район" class="css-149mw5z">
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Ads end -->
+
+    <br>
+    
+    <!-- Footer -->
+    <footer class="py-5">
+        <div class="container">
+            <div class="col-3 d-flex flex-column align-items-start py-5 ">
+                <a href="#">Мобильные приложения</a>
+                <a href="#">Помощь и Обратная связь</a>
+                <a href="#">Платные услуги</a>
+                <a href="#">Бизнес на OLX</a>
+                <a href="#">Условия использования</a>
+                <a href="#">Политика конфиденциальности</a>
+            </div>
+            <div class="col-3 d-flex flex-column align-items-start py-5 ">
+                <a href="#">Правила безопасности</a>
+                <a href="#">Карта сайта</a>
+                <a href="#">Карта регионов</a>
+                <a href="#">Популярные запросы</a>
+                <a href="#">Работа в OLX</a>
+                <a href="#">Как продавать и покупать?</a>
+                <a href="#">Контакт</a>
+            </div>
+            <div class="col-3 col-col py-5 ">
+                <div class="col-main">
+                    <a href="" class="hrefcol1 mx-1">
+                        <img src="https://www.olx.uz/app/static/media/google_play.8cb1ced49.svg" alt="">
+                    </a>
+                    <a href="" class="hrefcol2 mx-1">
+                        <img src="https://www.olx.uz/app/static/media/app_store.156ac6d41.svg" alt="">
+                    </a>
+                </div>
+                <span class="colspan my-4">Бесплатное приложение для твоего телефона</span>
+                <div class="colsp">
+                    <div class="colspan2 text-center my-4"><span class="fw-bold">Google play</span> <br>
+                        <span>Download</span>
+                    </div>
+                    <span class="colspan3 text-center my-4"><span class="fw-bold">App store</span><br>
+                        <span>Download</span>
+                    </span>
+                </div>
+            </div>
+        </div>
+        <div class="respublic container pb-5">
+            <a href="olx.bg" class="px-2">
+                <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 16 16" class="css-d7r8uj">
+                    <defs>
+                        <filter id="bulgariaFlag_svg__a" width="150%" height="172.7%" x="-25%" y="-36.4%"
+                            filterUnits="objectBoundingBox">
+                            <feOffset dy="1" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset>
+                            <feGaussianBlur in="shadowOffsetOuter1" result="shadowBlurOuter1" stdDeviation="0.5">
+                            </feGaussianBlur>
+                            <feColorMatrix in="shadowBlurOuter1" result="shadowMatrixOuter1"
+                                values="0 0 0 0 0.407843137 0 0 0 0 0.407843137 0 0 0 0 0.407843137 0 0 0 0.3 0">
+                            </feColorMatrix>
+                            <feMerge>
+                                <feMergeNode in="shadowMatrixOuter1"></feMergeNode>
+                                <feMergeNode in="SourceGraphic"></feMergeNode>
+                            </feMerge>
+                        </filter>
+                    </defs>
+                    <g fill="none" fill-rule="evenodd" filter="url(#bulgariaFlag_svg__a)" transform="translate(0 3)">
+                        <path fill="#458853" d="M0 .011h16v10.666H0z"></path>
+                        <path fill="#FFF" d="M0 .011h16v3.555H0z"></path>
+                        <path fill="#E42828" d="M0 7.122h16v3.555H0z"></path>
+                    </g>
+                </svg>
+                OLX.bg
+            </a>
+            <a href="olx.pl" class="px-2">
+                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1em"
+                    height="1em" viewBox="0 0 16 16" class="css-d7r8uj">
+                    <defs>
+                        <filter id="polandFlag_svg__a" width="137.5%" height="154.5%" x="-18.8%" y="-27.3%"
+                            filterUnits="objectBoundingBox">
+                            <feMorphology in="SourceAlpha" operator="dilate" radius="0.5" result="shadowSpreadOuter1">
+                            </feMorphology>
+                            <feOffset in="shadowSpreadOuter1" result="shadowOffsetOuter1"></feOffset>
+                            <feGaussianBlur in="shadowOffsetOuter1" result="shadowBlurOuter1" stdDeviation="0.5">
+                            </feGaussianBlur>
+                            <feColorMatrix in="shadowBlurOuter1"
+                                values="0 0 0 0 0.304772418 0 0 0 0 0.304772418 0 0 0 0 0.304772418 0 0 0 0.169826267 0">
+                            </feColorMatrix>
+                        </filter>
+                        <path id="polandFlag_svg__b" d="M0 3h16v11H0z"></path>
+                    </defs>
+                    <g fill="none" fill-rule="evenodd">
+                        <use fill="#000" filter="url(#polandFlag_svg__a)" xlink:href="#polandFlag_svg__b"></use>
+                        <use fill="#DF1111" xlink:href="#polandFlag_svg__b"></use>
+                        <path fill="#FFF" d="M0 3h16v6H0z"></path>
+                    </g>
+                </svg>
+                OLX.pl
+            </a>
+            <a href="olx.ro" class="px-2">
+                <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 16 16" class="css-d7r8uj">
+                    <defs>
+                        <filter id="romaniaFlag_svg__a" width="150%" height="172.7%" x="-25%" y="-36.4%"
+                            filterUnits="objectBoundingBox">
+                            <feOffset dy="1" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset>
+                            <feGaussianBlur in="shadowOffsetOuter1" result="shadowBlurOuter1" stdDeviation="0.5">
+                            </feGaussianBlur>
+                            <feColorMatrix in="shadowBlurOuter1" result="shadowMatrixOuter1"
+                                values="0 0 0 0 0.407523777 0 0 0 0 0.407523777 0 0 0 0 0.407523777 0 0 0 0.304113855 0">
+                            </feColorMatrix>
+                            <feMerge>
+                                <feMergeNode in="shadowMatrixOuter1"></feMergeNode>
+                                <feMergeNode in="SourceGraphic"></feMergeNode>
+                            </feMerge>
+                        </filter>
+                    </defs>
+                    <g fill="none" fill-rule="evenodd" filter="url(#romaniaFlag_svg__a)" transform="translate(0 3)">
+                        <path fill="#FCDD0E" d="M0 .01h16v10.666H0z"></path>
+                        <path fill="#040677" d="M0 .01h5.333v10.667H0z"></path>
+                        <path fill="#EC0B0B" d="M10.667.01H16v10.667h-5.333z"></path>
+                    </g>
+                </svg>
+                OLX.ro
+            </a>
+            <a href="olx.ua" class="px-2">
+                <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 16 16" class="css-d7r8uj">
+                    <defs>
+                        <filter id="ukraineFlag_svg__a" width="150%" height="172.7%" x="-25%" y="-36.4%"
+                            filterUnits="objectBoundingBox">
+                            <feOffset dy="1" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset>
+                            <feGaussianBlur in="shadowOffsetOuter1" result="shadowBlurOuter1" stdDeviation="0.5">
+                            </feGaussianBlur>
+                            <feColorMatrix in="shadowBlurOuter1" result="shadowMatrixOuter1"
+                                values="0 0 0 0 0.407843137 0 0 0 0 0.407843137 0 0 0 0 0.407843137 0 0 0 0.3 0">
+                            </feColorMatrix>
+                            <feMerge>
+                                <feMergeNode in="shadowMatrixOuter1"></feMergeNode>
+                                <feMergeNode in="SourceGraphic"></feMergeNode>
+                            </feMerge>
+                        </filter>
+                    </defs>
+                    <g fill="none" fill-rule="evenodd" filter="url(#ukraineFlag_svg__a)" transform="translate(0 3)">
+                        <path fill="#F7D210" d="M0 .011h16v10.666H0z"></path>
+                        <path fill="#1762E7" d="M0 .011h16v5.333H0z"></path>
+                    </g>
+                </svg>
+                OLX.ua
+            </a>
+            <a href="olx.pt" class="px-2">
+                <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 16 16" class="css-d7r8uj">
+                    <defs>
+                        <filter id="portugalFlag_svg__a" width="150%" height="172.7%" x="-25%" y="-36.4%"
+                            filterUnits="objectBoundingBox">
+                            <feOffset dy="1" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset>
+                            <feGaussianBlur in="shadowOffsetOuter1" result="shadowBlurOuter1" stdDeviation="0.5">
+                            </feGaussianBlur>
+                            <feColorMatrix in="shadowBlurOuter1" result="shadowMatrixOuter1"
+                                values="0 0 0 0 0.407843137 0 0 0 0 0.407843137 0 0 0 0 0.407843137 0 0 0 0.3 0">
+                            </feColorMatrix>
+                            <feMerge>
+                                <feMergeNode in="shadowMatrixOuter1"></feMergeNode>
+                                <feMergeNode in="SourceGraphic"></feMergeNode>
+                            </feMerge>
+                        </filter>
+                    </defs>
+                    <g fill="none" fill-rule="evenodd" filter="url(#portugalFlag_svg__a)" transform="translate(0 3)">
+                        <path fill="#F71111" d="M0 .011h16v10.666H0z"></path>
+                        <path fill="#288703" d="M6.145.011v10.666H0V.011z"></path>
+                        <circle cx="6.145" cy="5.344" r="2" fill="#F8D80C"></circle>
+                        <path fill="#F71111" d="M5.02 4.344v1.25a1.125 1.125 0 0 0 2.25 0v-1.25H5.02z"></path>
+                        <path fill="#F0F0F0" fill-rule="nonzero"
+                            d="M6.145 5.969a.375.375 0 0 1-.375-.375v-.5h.75v.5a.375.375 0 0 1-.375.375z"></path>
+                    </g>
+                </svg>
+                OLX.pt
+            </a>
+        </div>
+    </footer>
+    </div>
+    <!-- Footer end -->
+
+    <!-- Script -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/11.0.5/swiper-bundle.min.js"
+        integrity="sha512-Ysw1DcK1P+uYLqprEAzNQJP+J4hTx4t/3X2nbVwszao8wD+9afLjBQYjz7Uk4ADP+Er++mJoScI42ueGtQOzEA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="JS/script.js"></script>
+    <!-- Script end -->
+</body>
+
+</html>

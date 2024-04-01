@@ -1,0 +1,436 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OLX</title>
+    <script src="https://cdn.jsdelivr.net/npm/virtual-select-plugin@1.0.42/dist/virtual-select.min.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/virtual-select-plugin@1.0.42/dist/virtual-select.min.css" rel="stylesheet">
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.11.3/font/bootstrap-icons.min.css"
+        integrity="sha512-dPXYcDub/aeb08c63jRq/k6GaKccl256JQy/AnOq7CAnEZ9FzSL9wSbcZkMp4R26vBsMLFYH4kQ67/bbV8XaCQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+        integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="CSS/style.css">
+    <link rel="stylesheet" href="CSS/user.css">
+    <link rel="stylesheet" href="CSS/dashboard.css">
+    <link rel="stylesheet" href="CSS/newads.css">
+
+
+</head>
+
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg">
+        <div class="container d-flex justify-content-between">
+            <a class="navbar-brand" href="index.html">
+                <img src="Assets/img/logo.png" />
+            </a>
+
+            <div class="d-flex justify-content-end flex-row ">
+                <ul class="navbar-nav mb-2 mb-lg-0">
+                    <li class="nav-item mx-3">
+                        <a class="nav-link " aria-current="page" href="sms.html">
+                            <i class="fa-regular fa-comment"></i>
+                            Сообщения</a>
+                    </li>
+                    <div class="nav-cont mx-3 d-flex align-items-center">
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">O'Z</a>
+                        </li>
+                        |
+                        <li class="nav-item">
+                            <a class="nav-link active" href="#">РУ </a>
+                        </li>
+                    </div>
+                    <a class="nav-link " aria-current="page" href="favourites.html">
+                        <i class="fa-regular fa-heart mx-3"></i>
+                    </a>
+                    <div class="account mx-3">
+                        <a class="nav-link " aria-current="page" href="login.html">
+                            <i class="fa-regular fa-user "></i>
+                            Ваш профиль
+                        </a>
+                    </div>
+                    <a href="new.html" class="btn-nav p-3 px-4 py-2">
+                        Подать объявление
+                    </a>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!-- Navbar end -->
+
+    <!-- Bottom navbar -->
+    <div class="nav-bottom">
+        <div class="bottom-nav">
+            <a href="index.html">
+                <i class="bi bi-house-door-fill"></i>
+                <span>Главная</span>
+            </a>
+        </div>
+        <div class="bottom-nav">
+            <a href="favourites.html">
+                <i class="bi bi-heart"></i>
+                <span>Избранное</span>
+            </a>
+        </div>
+        <div class="bottom-nav">
+            <a href="new.html">
+                <i class="bi bi-plus-circle"></i>
+                <span>Создать</span>
+            </a>
+        </div>
+        <div class="bottom-nav">
+            <a href="sms.html">
+                <i class="fa-regular fa-comment"></i>
+                <span>Сообщения</span>
+            </a>
+        </div>
+        <div class="bottom-nav">
+            <a href="dashboard.html">
+                <i class="bi bi-person"></i>
+                <span>Профиль</span>
+            </a>
+        </div>
+    </div>
+    <!-- Bottom navbar end -->
+
+    <!-- Slide -->
+    <!-- <img src="Assets/img/one.gif" class="home-slide"> -->
+    <!-- <div class="slide-assets"></div> -->
+
+    <!-- Slide end -->
+    <br>
+    <div class="container">
+        <h2 class="ads-h1">Создать объявление</h2>
+        <form>
+            <div class="new-ads p-5">
+                <div class="newadss">
+                    <h5 class="newads-title">Опишите в подробностях</h5>
+                    <span class="newadstitle">Укажите название*</span>
+                    <input type="text" class="newads-input" min="16" placeholder="Например, iPhone 11 с гарантией">
+                    <span class="newadstitle"><span>Введите не менее 16 символов</span> <span></span></span>
+                </div>
+                <div class="newadss pt-3">
+                    <span class="newadstitle">Категория*</span>
+                    <div class="d-flex flex-wrap ssss">
+                        <div class="sec-center mx-1">
+                            <select id="multi_option" multiple name="native-select" placeholder="Введите категорию..."
+                                data-silent-initial-value-set="false">
+                                <option value="1">Недвижимость</option>
+                                <option value="2">Транспорт</option>
+                                <option value="3">Работа</option>
+                                <option value="4">Бизнес и услуги</option>
+                                <option value="5">Животные</option>
+                                <option value="6">Детский мир</option>
+                            </select>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+            <div class="new-ads p-5 mt-3">
+                <h5 class="newads-title">Фото</h5>
+                <span class="newadstitle">Первое фото будет на обложке объявления. Перетащите, чтобы изменить
+                    порядок.</span>
+                <div class="newadsimg mt-3">
+                    <!-- alohida -->
+                    <div class="ad">
+                        <label for="fileads" id="file-input">
+                            <img src="Assets/img/olx.png" alt="" id="img-preview">
+                            <input onload="showToast()" type="file" name="fileads"
+                                accept="image/heic, image/png, image/jpeg, image/webp">
+                        </label>
+                        <span class="filesub">
+                            Добавить фото
+                        </span>
+                    </div>
+
+                </div>
+            </div>
+            <div class="new-ads d-flex flex-column p-5 mt-3">
+                <span class="newadstitle">Описание*</span>
+                <textarea name="newadstextarea" id="textarea-new" rows="10" minlength="40"
+                    placeholder="Подумайте, какие подробности вы хотели бы узнать из объявления. И добавьте их в описание"></textarea>
+                <span class="newadstitle">Введите не менее 40 символов</span>
+            </div>
+            <div class="new-ads p-5 mt-3">
+                <div class="newprice">
+                    <button type="button" class="newprice-btn">Цена</button>
+                    <button type="button" class="newprice-btn1">Бесплатно</button>
+                    <button type="button" class="newprice-btn2">Обмен</button>
+                </div>
+                <div class="newprice-menu">
+                    <div class="newprice-pr">
+                        <p class="newadstitle">Цена*</p>
+                        <input type="text" class="newads-input w-25">
+                        <div class="newpr w-auto"></div>
+                        <div class="dogovor">
+                            <span class="dog-span">Договорная</span>
+                            <div class="form-check form-switch">
+                                <input class="form-check-input" type="checkbox" role="switch"
+                                    id="flexSwitchCheckDefault">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="new-ads p-5 mt-3">
+                <span class="newadstitle">Местоположение*</span>
+                <input type="text" class="newads-input" placeholder="Название города или индекс">
+            </div>
+            <div class="new-ads p-5 mt-3">
+                <h5 class="newads-title">Контактная информация</h5>
+                <span class="newadstitle">Контактное лицо*</span>
+                <input type="text" class="newads-input" placeholder="Например, имя">
+                <div class="new-ads">
+                    <span class="newadstitle">Email-адрес</span>
+                    <input type="email" class="newads-input" placeholder="Например, mail@gmail.com">
+                </div>
+                <div class="new-ads">
+                    <span class="newadstitle">Номер телефона</span>
+                    <input type="tel" class="newads-input">
+                </div>
+            </div>
+            <div class="new-ads newadss1 my-3 p-5">
+                <!--  -->
+                <button type="button" class="reg-btns" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+                    Опубликовать
+                </button>
+
+
+                <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false"
+                    tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                    <div class="modal-dialog modal-dialog-centered">
+                        <div class="modal-content">
+
+                            <div
+                                class="px-5 modal-body d-flex flex-column justify-content-center text-center align-items-center">
+                                <img src="https://www.olx.uz/app/static/media/phone.1bb04b2d2.svg" alt=""
+                                    class="nocontentimg">
+                                <span class="nocontenttitle fw-bold">Enter SMS Code</span>
+                                <p class="nocontentsub">Введите код из SMS, который мы отправили на</p>
+                                <p class="nocontentsub fw-bold">+998 93 228 1884</p>
+                                <div class="d-flex flex-column align-items-start w-100 container">
+                                    <span class="newadstitle">Код подтверждения</span>
+                                    <input type="number" class="newads-input w-100">
+                                    <button class="btn fw-bold">Отправить новый код</button>
+                                </div>
+                            </div>
+                            <div class="modal-footer ">
+                                <button type="button" class="btn reg-btns">Опубликовать</button>
+                                <button type="button" class="btn social-btn mx-2" data-bs-dismiss="modal">Close</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
+
+    <!-- Footer -->
+    <footer class="py-5">
+        <div class="container">
+            <div class="col-3 d-flex flex-column align-items-start py-5 ">
+                <a href="#">Мобильные приложения</a>
+                <a href="#">Помощь и Обратная связь</a>
+                <a href="#">Платные услуги</a>
+                <a href="#">Бизнес на OLX</a>
+                <a href="#">Условия использования</a>
+                <a href="#">Политика конфиденциальности</a>
+            </div>
+            <div class="col-3 d-flex flex-column align-items-start py-5 ">
+                <a href="#">Правила безопасности</a>
+                <a href="#">Карта сайта</a>
+                <a href="#">Карта регионов</a>
+                <a href="#">Популярные запросы</a>
+                <a href="#">Работа в OLX</a>
+                <a href="#">Как продавать и покупать?</a>
+                <a href="#">Контакт</a>
+            </div>
+            <div class="col-3 col-col py-5 ">
+                <div class="col-main">
+                    <a href="" class="hrefcol1 mx-1">
+                        <img src="https://www.olx.uz/app/static/media/google_play.8cb1ced49.svg" alt="">
+                    </a>
+                    <a href="" class="hrefcol2 mx-1">
+                        <img src="https://www.olx.uz/app/static/media/app_store.156ac6d41.svg" alt="">
+                    </a>
+                </div>
+                <span class="colspan my-4">Бесплатное приложение для твоего телефона</span>
+                <div class="colsp">
+                    <div class="colspan2 text-center my-4"><span class="fw-bold">Google play</span> <br>
+                        <span>Download</span>
+                    </div>
+                    <span class="colspan3 text-center my-4"><span class="fw-bold">App store</span><br>
+                        <span>Download</span>
+                    </span>
+                </div>
+            </div>
+        </div>
+        <div class="respublic container pb-5">
+            <a href="olx.bg" class="px-2">
+                <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 16 16" class="css-d7r8uj">
+                    <defs>
+                        <filter id="bulgariaFlag_svg__a" width="150%" height="172.7%" x="-25%" y="-36.4%"
+                            filterUnits="objectBoundingBox">
+                            <feOffset dy="1" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset>
+                            <feGaussianBlur in="shadowOffsetOuter1" result="shadowBlurOuter1" stdDeviation="0.5">
+                            </feGaussianBlur>
+                            <feColorMatrix in="shadowBlurOuter1" result="shadowMatrixOuter1"
+                                values="0 0 0 0 0.407843137 0 0 0 0 0.407843137 0 0 0 0 0.407843137 0 0 0 0.3 0">
+                            </feColorMatrix>
+                            <feMerge>
+                                <feMergeNode in="shadowMatrixOuter1"></feMergeNode>
+                                <feMergeNode in="SourceGraphic"></feMergeNode>
+                            </feMerge>
+                        </filter>
+                    </defs>
+                    <g fill="none" fill-rule="evenodd" filter="url(#bulgariaFlag_svg__a)" transform="translate(0 3)">
+                        <path fill="#458853" d="M0 .011h16v10.666H0z"></path>
+                        <path fill="#FFF" d="M0 .011h16v3.555H0z"></path>
+                        <path fill="#E42828" d="M0 7.122h16v3.555H0z"></path>
+                    </g>
+                </svg>
+                OLX.bg
+            </a>
+            <a href="olx.pl" class="px-2">
+                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1em"
+                    height="1em" viewBox="0 0 16 16" class="css-d7r8uj">
+                    <defs>
+                        <filter id="polandFlag_svg__a" width="137.5%" height="154.5%" x="-18.8%" y="-27.3%"
+                            filterUnits="objectBoundingBox">
+                            <feMorphology in="SourceAlpha" operator="dilate" radius="0.5" result="shadowSpreadOuter1">
+                            </feMorphology>
+                            <feOffset in="shadowSpreadOuter1" result="shadowOffsetOuter1"></feOffset>
+                            <feGaussianBlur in="shadowOffsetOuter1" result="shadowBlurOuter1" stdDeviation="0.5">
+                            </feGaussianBlur>
+                            <feColorMatrix in="shadowBlurOuter1"
+                                values="0 0 0 0 0.304772418 0 0 0 0 0.304772418 0 0 0 0 0.304772418 0 0 0 0.169826267 0">
+                            </feColorMatrix>
+                        </filter>
+                        <path id="polandFlag_svg__b" d="M0 3h16v11H0z"></path>
+                    </defs>
+                    <g fill="none" fill-rule="evenodd">
+                        <use fill="#000" filter="url(#polandFlag_svg__a)" xlink:href="#polandFlag_svg__b"></use>
+                        <use fill="#DF1111" xlink:href="#polandFlag_svg__b"></use>
+                        <path fill="#FFF" d="M0 3h16v6H0z"></path>
+                    </g>
+                </svg>
+                OLX.pl
+            </a>
+            <a href="olx.ro" class="px-2">
+                <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 16 16" class="css-d7r8uj">
+                    <defs>
+                        <filter id="romaniaFlag_svg__a" width="150%" height="172.7%" x="-25%" y="-36.4%"
+                            filterUnits="objectBoundingBox">
+                            <feOffset dy="1" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset>
+                            <feGaussianBlur in="shadowOffsetOuter1" result="shadowBlurOuter1" stdDeviation="0.5">
+                            </feGaussianBlur>
+                            <feColorMatrix in="shadowBlurOuter1" result="shadowMatrixOuter1"
+                                values="0 0 0 0 0.407523777 0 0 0 0 0.407523777 0 0 0 0 0.407523777 0 0 0 0.304113855 0">
+                            </feColorMatrix>
+                            <feMerge>
+                                <feMergeNode in="shadowMatrixOuter1"></feMergeNode>
+                                <feMergeNode in="SourceGraphic"></feMergeNode>
+                            </feMerge>
+                        </filter>
+                    </defs>
+                    <g fill="none" fill-rule="evenodd" filter="url(#romaniaFlag_svg__a)" transform="translate(0 3)">
+                        <path fill="#FCDD0E" d="M0 .01h16v10.666H0z"></path>
+                        <path fill="#040677" d="M0 .01h5.333v10.667H0z"></path>
+                        <path fill="#EC0B0B" d="M10.667.01H16v10.667h-5.333z"></path>
+                    </g>
+                </svg>
+                OLX.ro
+            </a>
+            <a href="olx.ua" class="px-2">
+                <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 16 16" class="css-d7r8uj">
+                    <defs>
+                        <filter id="ukraineFlag_svg__a" width="150%" height="172.7%" x="-25%" y="-36.4%"
+                            filterUnits="objectBoundingBox">
+                            <feOffset dy="1" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset>
+                            <feGaussianBlur in="shadowOffsetOuter1" result="shadowBlurOuter1" stdDeviation="0.5">
+                            </feGaussianBlur>
+                            <feColorMatrix in="shadowBlurOuter1" result="shadowMatrixOuter1"
+                                values="0 0 0 0 0.407843137 0 0 0 0 0.407843137 0 0 0 0 0.407843137 0 0 0 0.3 0">
+                            </feColorMatrix>
+                            <feMerge>
+                                <feMergeNode in="shadowMatrixOuter1"></feMergeNode>
+                                <feMergeNode in="SourceGraphic"></feMergeNode>
+                            </feMerge>
+                        </filter>
+                    </defs>
+                    <g fill="none" fill-rule="evenodd" filter="url(#ukraineFlag_svg__a)" transform="translate(0 3)">
+                        <path fill="#F7D210" d="M0 .011h16v10.666H0z"></path>
+                        <path fill="#1762E7" d="M0 .011h16v5.333H0z"></path>
+                    </g>
+                </svg>
+                OLX.ua
+            </a>
+            <a href="olx.pt" class="px-2">
+                <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 16 16" class="css-d7r8uj">
+                    <defs>
+                        <filter id="portugalFlag_svg__a" width="150%" height="172.7%" x="-25%" y="-36.4%"
+                            filterUnits="objectBoundingBox">
+                            <feOffset dy="1" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset>
+                            <feGaussianBlur in="shadowOffsetOuter1" result="shadowBlurOuter1" stdDeviation="0.5">
+                            </feGaussianBlur>
+                            <feColorMatrix in="shadowBlurOuter1" result="shadowMatrixOuter1"
+                                values="0 0 0 0 0.407843137 0 0 0 0 0.407843137 0 0 0 0 0.407843137 0 0 0 0.3 0">
+                            </feColorMatrix>
+                            <feMerge>
+                                <feMergeNode in="shadowMatrixOuter1"></feMergeNode>
+                                <feMergeNode in="SourceGraphic"></feMergeNode>
+                            </feMerge>
+                        </filter>
+                    </defs>
+                    <g fill="none" fill-rule="evenodd" filter="url(#portugalFlag_svg__a)" transform="translate(0 3)">
+                        <path fill="#F71111" d="M0 .011h16v10.666H0z"></path>
+                        <path fill="#288703" d="M6.145.011v10.666H0V.011z"></path>
+                        <circle cx="6.145" cy="5.344" r="2" fill="#F8D80C"></circle>
+                        <path fill="#F71111" d="M5.02 4.344v1.25a1.125 1.125 0 0 0 2.25 0v-1.25H5.02z"></path>
+                        <path fill="#F0F0F0" fill-rule="nonzero"
+                            d="M6.145 5.969a.375.375 0 0 1-.375-.375v-.5h.75v.5a.375.375 0 0 1-.375.375z"></path>
+                    </g>
+                </svg>
+                OLX.pt
+            </a>
+        </div>
+    </footer>
+    </div>
+    <!-- Footer end -->
+
+    <!-- Script -->
+    <script type="text/javascript">
+
+
+
+        VirtualSelect.init({
+            ele: '#multi_option',
+        });
+        VirtualSelect.init({
+            search: false,
+            ele: ".newpr",
+            options: [
+                { label: 'sum', value: 'sum' },
+                { label: 'y.e', value: 'y.e' },
+            ],
+        })
+    </script>
+    <script src="JS/script.js"></script>
+    <!-- Script end -->
+</body>
+
+</html>

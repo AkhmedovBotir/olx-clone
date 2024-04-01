@@ -1,0 +1,120 @@
+.accordion-input {
+    display: flex;
+    flex-direction: column;
+    color: #002f34 !important;
+}
+
+.acc-inp {
+    width: 50%;
+    background-color: #f2f4f5;
+    border: 0;
+    outline: none;
+    padding: .8rem 1.5rem;
+    border-radius: 5px;
+}
+
+.accordion-check>span,
+.accordion-input>label {
+    font-size: .9rem;
+}
+
+.accordion-check {
+    display: flex;
+}
+
+.accordion-check>input {
+    width: 25px;
+    height: 25px;
+    margin-right: 1vh;
+}
+
+.btn-save {
+    background-color: #002F34;
+    border: 5px solid transparent;
+    border-radius: 5px;
+    color: #fff;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.btn-save:hover {
+    transition: all ease-in-out .5s;
+    background-color: #fff;
+    color: #002F34;
+    border: 5px solid #002F34;
+}
+
+.accordion-button:not(.collapsed) {
+    background-color: #6dbbc486;
+    box-shadow: #6dbbc486 0 0 0 0 !important;
+    outline: 0 !important;
+}
+.acc1>tr>td,
+.acc1>tr>th{
+    border-bottom: #002F34 1px solid;
+}
+
+.acc1>tr>.w-100{
+    width: 60% !important;
+}
+.acc1>tr>.w-25{
+    width: 20% !important;
+}
+.acc-body{
+    width: 100vh;
+}
+.accordion-head{
+    width: 100vh;
+    display: flex;
+}
+.accordion-title{
+    display: flex;
+    flex-direction: column;
+    width: 70vh;
+}
+.accordion-title1{
+    width: 10vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.accordion-title1>input{
+    width: 25px;
+    height: 25px;
+}
+@media (max-width: 992px) {
+    .acc-inp{
+        width: 100%;
+    }
+    .acc-body{
+        width: 100%;
+    }
+    .accordion-head{
+        width: 100% !important;
+        font-size: .8rem;
+    }
+    .accordion-title{
+        width: 70% !important;
+    }
+    .accordion-title1{
+        margin: 0 !important;
+    }   
+}
+@media (max-width: 426px) {
+    .btn-save,
+    .accordion-title,
+    .accordion-check > span,
+    .accordion-button,
+    .accordion-input > label,
+    .accordion-input > input{
+        font-size: .7rem !important;
+    }
+    .accordion-title1 > input{
+        width: 15px;
+        height: 15px;
+    }
+    .btn-save{
+        padding: 0rem .5rem !important;
+    }
+}

@@ -1,0 +1,379 @@
+* {
+    color: #002F34;
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content {
+    list-style: none;
+    display: none;
+    padding: 0;
+    position: absolute;
+    background-color: #f1f1f1;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 999999999999999999999999999999999999;
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-item {
+    font-size: 1rem;
+}
+
+.dropdown-content a:hover {
+    background-color: #ddd;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+    color: #002F34;
+}
+
+.dropdown-item:hover {
+    font-weight: 700;
+}
+
+.drop-user {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2vh 0;
+}
+
+.drop-user>svg {
+    margin-right: 10px;
+    font-size: 3rem;
+}
+
+.drop-title {
+    font-weight: 700;
+}
+
+.drop-sub {
+    font-size: .7rem;
+}
+
+.lititle {
+    color: rgb(127, 151, 153);
+    font-weight: 900;
+}
+
+.btn-submit>.butn {
+    background-color: #002F34;
+    border: 5px solid transparent;
+    border-radius: 5px;
+    color: #fff;
+    padding-left: 32px;
+    padding-right: 32px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.btn-submit>.butn:hover {
+    color: #002F34;
+    background-color: #fff;
+    border: 5px solid #002F34;
+}
+
+.olxprofil {
+    display: flex;
+    justify-content: space-between;
+}
+
+.dashboardtitle {
+    font-size: 2rem;
+    font-weight: 700;
+}
+
+.dashboard-right {
+    display: flex;
+}
+
+.dashboard-right>.btn-submit {
+    display: flex;
+    justify-content: space-between;
+}
+
+.sum>.sum-balans,
+.dashboard-right>.btn-submit>button {
+    font-size: .9rem;
+}
+
+.sum-balans {
+    text-align: end;
+}
+
+.sum {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.dashboardmore {
+    display: flex;
+    align-items: center;
+    justify-content: end;
+}
+
+.dashboardmore>a {
+    font-size: .8rem;
+}
+
+.olxpr {
+    background-color: #fff;
+}
+
+.navlinks {
+    display: flex;
+    padding: 2vh 0;
+}
+
+.navlinks-a {
+    text-decoration: none;
+    padding: 2vh;
+    color: rgb(127, 151, 153);
+    font-weight: 100;
+}
+
+.navlinks-a:hover {
+    font-weight: 300;
+    color: #002F34;
+}
+
+.navactive {
+    color: #002F34;
+    font-weight: 700;
+    border-bottom: #002F34 2px solid;
+}
+
+.navactive:hover {
+    color: #002F34;
+    font-weight: 700;
+    border-bottom: #002F34 2px solid;
+}
+
+.adinp {
+    display: flex;
+    align-items: center;
+}
+
+.adinputs {
+    background-color: #fff;
+    border-radius: 5px;
+    margin: 1vh 0;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: 700;
+    padding: 0 1vh;
+    height: 48px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.adinput {
+    outline: 0;
+    background-color: transparent;
+    border: transparent;
+}
+
+.adinp>button {
+    font-size: .9rem !important;
+    padding: 0 1.5vh;
+}
+
+.adinput:focus {
+    border-bottom: #002F34 1px solid
+}
+
+.sec-center {
+    position: relative;
+    max-width: 100%;
+    text-align: center;
+    z-index: 200;
+}
+
+
+.adinp {
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.labels {
+    display: block;
+    font-size: 18px;
+    font-weight: 700;
+    margin-bottom: 5px;
+}
+
+.vscomp-toggle-button {
+    padding: 10px 30px 10px 10px;
+    border-radius: 5px;
+}
+
+.nocontent {
+    height: 70vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.nocontentimg {
+    width: 10rem;
+}
+
+.nocontent-title {
+    font-weight: 700;
+    font-size: 1.5rem;
+}
+
+.nocontent-sub {
+    font-size: 1.1rem;
+}
+
+.yescontcard {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 3vh 0;
+    border-bottom: #002F34 2px solid;
+}
+
+.form-check-input {
+    width: 1.5rem;
+    outline: none !important;
+    height: 1.5rem;
+    border: 1px solid #002F34;
+}
+
+.yesimg {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.yescardimg {
+    width: 50%;
+}
+
+.yescardmenu {
+    width: 100%;
+}
+
+.views {
+    display: flex;
+}
+
+.yesd {
+    justify-content: space-around;
+}
+
+.yescontentstat,
+.yesd {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.viewbtn {
+    display: flex;
+}
+
+.viewbtn>button {
+    font-size: .8rem;
+    height: 35px;
+}
+
+@media (max-width: 1200px) {
+    .yescontentstat {
+        flex-direction: column;
+    }
+}
+
+@media (max-width: 992px) {
+
+    .dashboard-right,
+    .dashboardmore,
+    .olxprofil {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .sum {
+        width: 100%;
+    }
+
+    .dashboardtitle {
+        margin: 1.5vh 0;
+    }
+
+    .sum-balans,
+    .dashboardtitle,
+    .dashboard-right {
+        width: 100%;
+        text-align: center;
+    }
+}
+
+@media (max-width: 768px) {
+    .navlinks-a {
+        padding: 1vh;
+        font-size: .8rem;
+    }
+
+    .adinp>.social-btn>svg {
+        font-size: 1rem;
+    }
+
+    .navlinks,
+    .btn-submit {
+        justify-content: center !important;
+        flex-wrap: wrap;
+    }
+
+    .nocontent-sub,
+    .vscomp-search-input,
+    .vscomp-dropbox-container,
+    .vscomp-toggle-button,
+    .adinp>ul>li>a,
+    .adinp>.social-btn {
+        font-size: .8rem !important;
+    }
+
+    .vscomp-toggle-button {
+        margin: 1vh 0;
+    }
+
+    .nocontent-title {
+        font-size: 1rem;
+    }
+
+    .yesimg {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+    }
+
+    .yesimg>img {
+        width: 30%;
+    }
+
+    .viewbtn,
+    .yescontcard {
+        flex-direction: column;
+    }
+}

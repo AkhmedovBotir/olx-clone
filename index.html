@@ -1,0 +1,801 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OLX</title>
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.11.3/font/bootstrap-icons.min.css"
+        integrity="sha512-dPXYcDub/aeb08c63jRq/k6GaKccl256JQy/AnOq7CAnEZ9FzSL9wSbcZkMp4R26vBsMLFYH4kQ67/bbV8XaCQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+        integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="CSS/style.css">
+</head>
+
+<body>
+
+    <a href="" class="href-olx">
+        <div class="a-olx"></div>
+    </a>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg">
+        <div class="container d-flex justify-content-between">
+            <a class="navbar-brand" href="index.html">
+                <img src="Assets/img/logo.png" />
+            </a>
+
+            <div class="d-flex justify-content-end flex-row ">
+                <ul class="navbar-nav mb-2 mb-lg-0">
+                    <li class="nav-item mx-3">
+                        <a class="nav-link" aria-current="page" href="sms.html">
+                            <i class="fa-regular fa-comment"></i>
+                            Сообщения</a>
+                    </li>
+                    <div class="nav-cont mx-3 d-flex align-items-center">
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">O'Z</a>
+                        </li>
+                        |
+                        <li class="nav-item">
+                            <a class="nav-link active" href="#">РУ </a>
+                        </li>
+                    </div>
+                    <a class="nav-link " aria-current="page" href="favourites.html">
+                        <i class="fa-regular fa-heart mx-3"></i>
+                    </a>
+                    <div class="account mx-3">
+                        <a class="nav-link " aria-current="page" href="login.html">
+                            <i class="fa-regular fa-user "></i>
+                            Ваш профиль
+                        </a>
+                    </div>
+                    <a href="dashboard.html" class="btn-nav p-3 px-4 py-2">
+                        Подать объявление
+                    </a>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!-- Navbar end -->
+
+    <!-- Bottom navbar -->
+    <div class="nav-bottom">
+        <div class="bottom-nav">
+            <a href="index.html">
+                <i class="bi bi-house-door-fill"></i>
+                <span>Главная</span>
+            </a>
+        </div>
+        <div class="bottom-nav">
+            <a href="favourites.html">
+                <i class="bi bi-heart"></i>
+                <span>Избранное</span>
+            </a>
+        </div>
+        <div class="bottom-nav">
+            <a href="new.html">
+                <i class="bi bi-plus-circle"></i>
+                <span>Создать</span>
+            </a>
+        </div>
+        <div class="bottom-nav">
+            <a href="sms.html">
+                <i class="fa-regular fa-comment"></i>
+                <span>Сообщения</span>
+            </a>
+        </div>
+        <div class="bottom-nav">
+            <a href="dashboard.html">
+                <i class="bi bi-person"></i>
+                <span>Профиль</span>
+            </a>
+        </div>
+    </div>
+    <!-- Bottom navbar end -->
+
+    <!-- Slide -->
+    <!-- <img src="Assets/img/one.gif" class="home-slide"> -->
+    <div class="slide-assets"></div>
+
+    <!-- Slide end -->
+
+    <!-- Alert -->
+    <div class="container">
+        <div class="alerts">
+            <div class="alert m-0 alert-warning alert-dismissible" role="alert">
+                <div>OLX servisi bo‘yicha savollaringiz bormi?</div>
+                <div class="alert-right">
+                    <a href="https://www.t.me/OLXYordamBot" class="alertlink">
+                        <span class="alerttext">OLX yordam markazi</span>
+                        <div class="alertdown"></div>
+                    </a>
+                    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Alert end -->
+
+    <!-- Search -->
+    <div class="csearch">
+        <div class="container">
+            <div class="search-div py-5">
+                <div class="search-main container-fluid mt-4 ">
+                    <div class="input-main col-7 px-3 py-4">
+                        <i class="fa-solid fa-magnifying-glass mx-1"></i>
+                        <input type="text" class="search-input" placeholder="Что ищете?">
+                    </div>
+                    <div class="input-main-location col-3 px-3 py-4">
+                        <i class="bi bi-geo-alt mx-1"></i>
+                        <input type="text" class="search-input" placeholder="Вся страна">
+                    </div>
+                    <button class="button-search col-2 search-button">
+                        <span>Поиск</span>
+                        <i class="fa-solid fa-magnifying-glass mx-1"></i>
+                    </button>
+                    <a href="#" class="search-notf">
+                        <i class="bi bi-bell"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Search end -->
+
+    <!-- Services category -->
+    <div class="container">
+        <div class="services container-fluid">
+            <div class="services-title py-5">Разделы на сервисе OLX</div>
+            <div class="serv-menus">
+                <div class="menu-services container">
+                    <div class="menu-top">
+                        <a href="index.html">
+                            <i class="fa-solid fa-angle-right"></i>
+                            <span class="menu-op">
+                                Просмотреть все объявления
+                            </span>
+                            <span class="menu-ob">
+                                в Детский мир
+                            </span>
+                        </a>
+                    </div>
+                    <hr>
+                    <div class="menu-bottom">
+                        <a href="#">
+                            <i class="fa-solid fa-angle-right"></i>
+                            <span>
+                                Детская одежда
+                            </span>
+                        </a>
+                        <a href="#">
+                            <i class="fa-solid fa-angle-right"></i>
+                            <span>
+                                Детская мебель
+                            </span>
+                        </a>
+                        <a href="#">
+                            <i class="fa-solid fa-angle-right"></i>
+                            <span>
+                                Товары для школьников
+                            </span>
+                        </a>
+                        <a href="#">
+                            <i class="fa-solid fa-angle-right"></i>
+                            <span>
+                                Детская обувь
+                            </span>
+                        </a>
+                        <a href="#">
+                            <i class="fa-solid fa-angle-right"></i>
+                            <span>
+                                Игрушки
+                            </span>
+                        </a>
+                        <a href="#">
+                            <i class="fa-solid fa-angle-right"></i>
+                            <span>
+                                Прочие детские товары
+                            </span>
+                        </a>
+                        <a href="#">
+                            <i class="fa-solid fa-angle-right"></i>
+                            <span>
+                                Детские коляски
+                            </span>
+                        </a>
+                        <a href="#">
+                            <i class="fa-solid fa-angle-right"></i>
+                            <span>
+                                Детский транспорт
+                            </span>
+                        </a>
+                        <a href="#">
+                            <i class="fa-solid fa-angle-right"></i>
+                            <span>
+                                Детские автокресла
+                            </span>
+                        </a>
+                    </div>
+                    <hr>
+                </div>
+            </div>
+            <div class="services-card">
+                <a onclick="menuBos()" href="#" class="cardserv m-2">
+                    <div class="card-serv">
+                        <img class="serv1"
+                            src="https://categories.olxcdn.com/assets/categories/olxuz/detskiy-mir-36-1x.png" alt="">
+                    </div>
+                    <span class="my-3 mt-3">Детский мир</span>
+                </a>
+                <a onclick="menuBos()" href="#" class="cardserv m-2">
+                    <div class="card-serv">
+                        <img class="serv2"
+                            src="https://categories.olxcdn.com/assets/categories/olxuz/nedvizhimost-1-1x.png" alt="">
+                    </div>
+                    <span class="my-3 mt-3">Недвижимость</span>
+                </a>
+                <a onclick="menuBos()" href="#" class="cardserv m-2">
+                    <div class="card-serv">
+                        <img class="serv3"
+                            src="https://categories.olxcdn.com/assets/categories/olxuz/transport-3-1x.png" alt="">
+                    </div>
+                    <span class="my-3 mt-3">Транспорт</span>
+                </a>
+                <a onclick="menuBos()" href="#" class="cardserv m-2">
+                    <div class="card-serv">
+                        <img class="serv4" src="https://categories.olxcdn.com/assets/categories/olxuz/rabota-6-1x.png"
+                            alt="">
+                    </div>
+                    <span class="my-3 mt-3">Работа</span>
+                </a>
+                <a onclick="menuBos()" href="#" class="cardserv m-2">
+                    <div class="card-serv">
+                        <img class="serv5"
+                            src="https://categories.olxcdn.com/assets/categories/olxuz/zhivotnye-35-1x.png" alt="">
+                    </div>
+                    <span class="my-3 mt-3">Животные</span>
+                </a>
+                <a onclick="menuBos()" href="#" class="cardserv m-2">
+                    <div class="card-serv">
+                        <img class="serv6"
+                            src="https://categories.olxcdn.com/assets/categories/olxuz/dom-i-sad-899-1x.png" alt="">
+                    </div>
+                    <span class="my-3 mt-3">Дом и сад</span>
+                </a>
+                <a onclick="menuBos()" href="#" class="cardserv m-2">
+                    <div class="card-serv">
+                        <img class="serv7"
+                            src="https://categories.olxcdn.com/assets/categories/olxuz/elektronika-37-1x.png" alt="">
+                    </div>
+                    <span class="my-3 mt-3">Электроника</span>
+                </a>
+                <a onclick="menuBos()" href="#" class="cardserv m-2">
+                    <div class="card-serv">
+                        <img class="serv8" src="https://categories.olxcdn.com/assets/categories/olxuz/uslugi-7-1x.png"
+                            alt="">
+                    </div>
+                    <span class="my-3 mt-3">Бизнес и услуги</span>
+                </a>
+                <a onclick="menuBos()" href="#" class="cardserv m-2">
+                    <div class="card-serv">
+                        <img class="serv9"
+                            src="https://categories.olxcdn.com/assets/categories/olxuz/moda-i-stil-891-1x.png" alt="">
+                    </div>
+                    <span class="my-3 mt-3">Мода и стиль</span>
+                </a>
+                <a href="#" class="cardserv m-2">
+                    <div class="card-serv">
+                        <img class="serv10"
+                            src="https://categories.olxcdn.com/assets/categories/olxuz/hobbi-otdyh-i-sport-903-1x.png"
+                            alt="">
+                    </div>
+                    <span class="my-3 mt-3">Хобби, отдых и спорт</span>
+                </a>
+                <a href="#" class="cardserv m-2">
+                    <div class="card-serv">
+                        <img class="serv11"
+                            src="https://categories.olxcdn.com/assets/categories/olxuz/otdam-darom-1151-1x.png" alt="">
+                    </div>
+                    <span class="my-3 mt-3">Отдам даром</span>
+                </a>
+                <a href="#" class="cardserv m-2">
+                    <div class="card-serv">
+                        <img class="serv12"
+                            src="https://categories.olxcdn.com/assets/categories/olxuz/obmen-barter-1153-1x.png" alt="">
+                    </div>
+                    <span class="my-3 mt-3">Обмен</span>
+                </a>
+            </div>
+        </div>
+    </div>
+    <!-- Services category end -->
+
+    <!-- Ads -->
+    <div class="container">
+        <div class="ads container-fluid">
+            <div class="services-title py-5">VIP-объявления</div>
+            <div class="ads-main">
+                <div class="card-ads m-1">
+                    <img src="Assets/img/olx.png" class="card-ads-img" />
+                    <div class="ads-menu container-fluid py-2">
+                        <div class="ads-title">
+                            <div class="ads-title-class">
+                                <div class="ads-cl">Видео домофон COMMAX</div>
+                                <i class="fa-regular fa-heart"></i>
+                            </div>
+                            <div class="fw-bold">875 000 сум</div>
+                            <br>
+                            <div class="ads-subtitle">
+                                <span class="ads-sub">Ташкент, Чиланзарский район</span>
+                                <span class="ads-sub">05 марта 2024 г.</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="card-ads m-1">
+                    <img src="Assets/img/olx.png" class="card-ads-img" />
+                    <div class="ads-menu container-fluid py-2">
+                        <div class="ads-title">
+                            <div class="ads-title-class">
+                                <div class="ads-cl">Видео домофон COMMAX</div>
+                                <i class="fa-regular fa-heart"></i>
+                            </div>
+                            <div class="fw-bold">875 000 сум</div>
+                            <br>
+                            <div class="ads-subtitle">
+                                <span class="ads-sub">Ташкент, Чиланзарский район</span>
+                                <span class="ads-sub">05 марта 2024 г.</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="card-ads m-1">
+                    <img src="Assets/img/olx.png" class="card-ads-img" />
+                    <div class="ads-menu container-fluid py-2">
+                        <div class="ads-title">
+                            <div class="ads-title-class">
+                                <div class="ads-cl">Видео домофон COMMAX</div>
+                                <i class="fa-regular fa-heart"></i>
+                            </div>
+                            <div class="fw-bold">875 000 сум</div>
+                            <br>
+                            <div class="ads-subtitle">
+                                <span class="ads-sub">Ташкент, Чиланзарский район</span>
+                                <span class="ads-sub">05 марта 2024 г.</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="card-ads m-1">
+                    <img src="Assets/img/olx.png" class="card-ads-img" />
+                    <div class="ads-menu container-fluid py-2">
+                        <div class="ads-title">
+                            <div class="ads-title-class">
+                                <div class="ads-cl">Видео домофон COMMAX</div>
+                                <i class="fa-regular fa-heart"></i>
+                            </div>
+                            <div class="fw-bold">875 000 сум</div>
+                            <br>
+                            <div class="ads-subtitle">
+                                <span class="ads-sub">Ташкент, Чиланзарский район</span>
+                                <span class="ads-sub">05 марта 2024 г.</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="card-ads m-1">
+                    <img src="Assets/img/olx.png" class="card-ads-img" />
+                    <div class="ads-menu container-fluid py-2">
+                        <div class="ads-title">
+                            <div class="ads-title-class">
+                                <div class="ads-cl">Видео домофон COMMAX</div>
+                                <i class="fa-regular fa-heart"></i>
+                            </div>
+                            <div class="fw-bold">875 000 сум</div>
+                            <br>
+                            <div class="ads-subtitle">
+                                <span class="ads-sub">Ташкент, Чиланзарский район</span>
+                                <span class="ads-sub">05 марта 2024 г.</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="card-ads m-1">
+                    <img src="Assets/img/olx.png" class="card-ads-img" />
+                    <div class="ads-menu container-fluid py-2">
+                        <div class="ads-title">
+                            <div class="ads-title-class">
+                                <div class="ads-cl">Видео домофон COMMAX</div>
+                                <i class="fa-regular fa-heart"></i>
+                            </div>
+                            <div class="fw-bold">875 000 сум</div>
+                            <br>
+                            <div class="ads-subtitle">
+                                <span class="ads-sub">Ташкент, Чиланзарский район</span>
+                                <span class="ads-sub">05 марта 2024 г.</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="card-ads m-1">
+                    <img src="Assets/img/olx.png" class="card-ads-img" />
+                    <div class="ads-menu container-fluid py-2">
+                        <div class="ads-title">
+                            <div class="ads-title-class">
+                                <div class="ads-cl">Видео домофон COMMAX</div>
+                                <i class="fa-regular fa-heart"></i>
+                            </div>
+                            <div class="fw-bold">875 000 сум</div>
+                            <br>
+                            <div class="ads-subtitle">
+                                <span class="ads-sub">Ташкент, Чиланзарский район</span>
+                                <span class="ads-sub">05 марта 2024 г.</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="card-ads m-1">
+                    <img src="Assets/img/olx.png" class="card-ads-img" />
+                    <div class="ads-menu container-fluid py-2">
+                        <div class="ads-title">
+                            <div class="ads-title-class">
+                                <div class="ads-cl">Видео домофон COMMAX</div>
+                                <i class="fa-regular fa-heart"></i>
+                            </div>
+                            <div class="fw-bold">875 000 сум</div>
+                            <br>
+                            <div class="ads-subtitle">
+                                <span class="ads-sub">Ташкент, Чиланзарский район</span>
+                                <span class="ads-sub">05 марта 2024 г.</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="card-ads m-1">
+                    <img src="Assets/img/olx.png" class="card-ads-img" />
+                    <div class="ads-menu container-fluid py-2">
+                        <div class="ads-title">
+                            <div class="ads-title-class">
+                                <div class="ads-cl">Видео домофон COMMAX</div>
+                                <i class="fa-regular fa-heart"></i>
+                            </div>
+                            <div class="fw-bold">875 000 сум</div>
+                            <br>
+                            <div class="ads-subtitle">
+                                <span class="ads-sub">Ташкент, Чиланзарский район</span>
+                                <span class="ads-sub">05 марта 2024 г.</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="card-ads m-1">
+                    <img src="Assets/img/olx.png" class="card-ads-img" />
+                    <div class="ads-menu container-fluid py-2">
+                        <div class="ads-title">
+                            <div class="ads-title-class">
+                                <div class="ads-cl">Видео домофон COMMAX</div>
+                                <i class="fa-regular fa-heart"></i>
+                            </div>
+                            <div class="fw-bold">875 000 сум</div>
+                            <br>
+                            <div class="ads-subtitle">
+                                <span class="ads-sub">Ташкент, Чиланзарский район</span>
+                                <span class="ads-sub">05 марта 2024 г.</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="card-ads m-1">
+                    <img src="Assets/img/olx.png" class="card-ads-img" />
+                    <div class="ads-menu container-fluid py-2">
+                        <div class="ads-title">
+                            <div class="ads-title-class">
+                                <div class="ads-cl">Видео домофон COMMAX</div>
+                                <i class="fa-regular fa-heart"></i>
+                            </div>
+                            <div class="fw-bold">875 000 сум</div>
+                            <br>
+                            <div class="ads-subtitle">
+                                <span class="ads-sub">Ташкент, Чиланзарский район</span>
+                                <span class="ads-sub">05 марта 2024 г.</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="card-ads m-1">
+                    <img src="Assets/img/olx.png" class="card-ads-img" />
+                    <div class="ads-menu container-fluid py-2">
+                        <div class="ads-title">
+                            <div class="ads-title-class">
+                                <div class="ads-cl">Видео домофон COMMAX</div>
+                                <i class="fa-regular fa-heart"></i>
+                            </div>
+                            <div class="fw-bold">875 000 сум</div>
+                            <br>
+                            <div class="ads-subtitle">
+                                <span class="ads-sub">Ташкент, Чиланзарский район</span>
+                                <span class="ads-sub">05 марта 2024 г.</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <br>
+            <br>
+        </div>
+    </div>
+    <!-- Ads end -->
+
+    <!-- Interest -->
+    <div class="container">
+        <div class="interest">
+            <img src="https://www.olx.uz/app/static/media/graph.49012f6ae.svg" alt="">
+            <div class="interest-text px-5 mx-5">
+                <div class="interest-title">Посмотрите предложение OLX для бизнеса</div>
+                <div class="interest-sub">Начните бизнес в интернете с OLX!</div>
+            </div>
+            <a href class="btn-nav p-3 px-4 py-2">
+                Подробнее
+            </a>
+        </div>
+    </div>
+    <!-- Interest end -->
+
+    <!-- Service ads -->
+    <div class="container">
+        <div class="serv-ads">
+            <img src="Assets/img/icon.png" class="serv-img py-5">
+            <div class="serv-subtitle">
+                <span class="serv-ads-sub">Cервис объявлений № 1 в Узбекистане</span>
+                <span class="serv-ads-sub">Частные объявления Узбекистана на OLX (бывший torg.uz) - здесь вы найдете то,
+                    что
+                    искали. Нажав на кнопку "Подать объявление", вы сможете разместить онлайн-объявление на любую
+                    необходимую тематику - поиск работы, услуги, продажа автомобилей, недвижимости, электроники и многое
+                    другое.</span>
+                <span class="serv-ads-sub">С помощью сервиса OLX в Узбекистане вы можете найти, продать или купить
+                    практически все, что угодно.</span>
+                <span class="serv-ads-sub">Воспользовавшись функцией поиска, вы без труда найдете уже опубликованные
+                    объявления интересующей вас тематики.
+                    <br> OLX в Узбекистане - ваш надежный и незаменимый помощник.</span>
+            </div>
+            <div class="py-5"></div>
+        </div>
+    </div>
+    <!-- Service ads end -->
+
+    <!-- Service about -->
+    <div class="container">
+        <div class="serv-about py-4">
+            <div class="col-6 py-5">
+                <div class="p-3">
+                    <img src="https://www.olx.uz/app/static/media/olx_category.f0c6831ac.svg" alt="">
+                </div>
+                <span>
+                    <b>Разделы на сервисе OLX:</b>
+                    <a href="#">Детский мир</a>,
+                    <a href="#">Недвижимость</a>,
+                    <a href="#">Транспорт</a>,
+                    <a href="#">Работа</a>,
+                    <a href="#">Животные</a>,
+                    <a href="#">Дом и сад</a>,
+                    <a href="#">Электроника</a>,
+                    <a href="#">Бизнес и услуги</a>,
+                    <a href="#">Мода и стиль</a>,
+                    <a href="#">Хобби</a>,
+                    <a href="#">отдых и спорт</a>,
+                    <a href="#">Отдам даром</a>,
+                    <a href="#">Обмен</a>
+                </span>
+            </div>
+            <div class="col-6 py-5">
+                <div class="p-3">
+                    <img src="https://www.olx.uz/app/static/media/olx_category.f0c6831ac.svg" alt="">
+                </div>
+                <span>
+                    <b>Разделы на сервисе OLX:</b>
+                    <a href="#">Детский мир</a>,
+                    <a href="#">Недвижимость</a>,
+                    <a href="#">Транспорт</a>,
+                    <a href="#">Работа</a>,
+                    <a href="#">Животные</a>,
+                    <a href="#">Дом и сад</a>,
+                    <a href="#">Электроника</a>,
+                    <a href="#">Бизнес и услуги</a>,
+                    <a href="#">Мода и стиль</a>,
+                    <a href="#">Хобби</a>,
+                    <a href="#">отдых и спорт</a>,
+                    <a href="#">Отдам даром</a>,
+                    <a href="#">Обмен</a>
+                </span>
+            </div>
+        </div>
+    </div>
+    <!-- Service about end -->
+
+    <!-- Footer -->
+    <footer class="py-5">
+        <div class="container">
+            <div class="col-3 d-flex flex-column align-items-start py-5 ">
+                <a href="#">Мобильные приложения</a>
+                <a href="#">Помощь и Обратная связь</a>
+                <a href="#">Платные услуги</a>
+                <a href="#">Бизнес на OLX</a>
+                <a href="#">Условия использования</a>
+                <a href="#">Политика конфиденциальности</a>
+            </div>
+            <div class="col-3 d-flex flex-column align-items-start py-5 ">
+                <a href="#">Правила безопасности</a>
+                <a href="#">Карта сайта</a>
+                <a href="#">Карта регионов</a>
+                <a href="#">Популярные запросы</a>
+                <a href="#">Работа в OLX</a>
+                <a href="#">Как продавать и покупать?</a>
+                <a href="#">Контакт</a>
+            </div>
+            <div class="col-3 col-col py-5 ">
+                <div class="col-main">
+                    <a href="" class="hrefcol1 mx-1">
+                        <img src="https://www.olx.uz/app/static/media/google_play.8cb1ced49.svg" alt="">
+                    </a>
+                    <a href="" class="hrefcol2 mx-1">
+                        <img src="https://www.olx.uz/app/static/media/app_store.156ac6d41.svg" alt="">
+                    </a>
+                </div>
+                <span class="colspan my-4">Бесплатное приложение для твоего телефона</span>
+                <div class="colsp">
+                    <div class="colspan2 text-center my-4"><span class="fw-bold">Google play</span> <br>
+                        <span>Download</span>
+                    </div>
+                    <span class="colspan3 text-center my-4"><span class="fw-bold">App store</span><br>
+                        <span>Download</span>
+                    </span>
+                </div>
+            </div>
+        </div>
+        <div class="respublic container pb-5">
+            <a href="olx.bg" class="px-2">
+                <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 16 16" class="css-d7r8uj">
+                    <defs>
+                        <filter id="bulgariaFlag_svg__a" width="150%" height="172.7%" x="-25%" y="-36.4%"
+                            filterUnits="objectBoundingBox">
+                            <feOffset dy="1" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset>
+                            <feGaussianBlur in="shadowOffsetOuter1" result="shadowBlurOuter1" stdDeviation="0.5">
+                            </feGaussianBlur>
+                            <feColorMatrix in="shadowBlurOuter1" result="shadowMatrixOuter1"
+                                values="0 0 0 0 0.407843137 0 0 0 0 0.407843137 0 0 0 0 0.407843137 0 0 0 0.3 0">
+                            </feColorMatrix>
+                            <feMerge>
+                                <feMergeNode in="shadowMatrixOuter1"></feMergeNode>
+                                <feMergeNode in="SourceGraphic"></feMergeNode>
+                            </feMerge>
+                        </filter>
+                    </defs>
+                    <g fill="none" fill-rule="evenodd" filter="url(#bulgariaFlag_svg__a)" transform="translate(0 3)">
+                        <path fill="#458853" d="M0 .011h16v10.666H0z"></path>
+                        <path fill="#FFF" d="M0 .011h16v3.555H0z"></path>
+                        <path fill="#E42828" d="M0 7.122h16v3.555H0z"></path>
+                    </g>
+                </svg>
+                OLX.bg
+            </a>
+            <a href="olx.pl" class="px-2">
+                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1em"
+                    height="1em" viewBox="0 0 16 16" class="css-d7r8uj">
+                    <defs>
+                        <filter id="polandFlag_svg__a" width="137.5%" height="154.5%" x="-18.8%" y="-27.3%"
+                            filterUnits="objectBoundingBox">
+                            <feMorphology in="SourceAlpha" operator="dilate" radius="0.5" result="shadowSpreadOuter1">
+                            </feMorphology>
+                            <feOffset in="shadowSpreadOuter1" result="shadowOffsetOuter1"></feOffset>
+                            <feGaussianBlur in="shadowOffsetOuter1" result="shadowBlurOuter1" stdDeviation="0.5">
+                            </feGaussianBlur>
+                            <feColorMatrix in="shadowBlurOuter1"
+                                values="0 0 0 0 0.304772418 0 0 0 0 0.304772418 0 0 0 0 0.304772418 0 0 0 0.169826267 0">
+                            </feColorMatrix>
+                        </filter>
+                        <path id="polandFlag_svg__b" d="M0 3h16v11H0z"></path>
+                    </defs>
+                    <g fill="none" fill-rule="evenodd">
+                        <use fill="#000" filter="url(#polandFlag_svg__a)" xlink:href="#polandFlag_svg__b"></use>
+                        <use fill="#DF1111" xlink:href="#polandFlag_svg__b"></use>
+                        <path fill="#FFF" d="M0 3h16v6H0z"></path>
+                    </g>
+                </svg>
+                OLX.pl
+            </a>
+            <a href="olx.ro" class="px-2">
+                <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 16 16" class="css-d7r8uj">
+                    <defs>
+                        <filter id="romaniaFlag_svg__a" width="150%" height="172.7%" x="-25%" y="-36.4%"
+                            filterUnits="objectBoundingBox">
+                            <feOffset dy="1" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset>
+                            <feGaussianBlur in="shadowOffsetOuter1" result="shadowBlurOuter1" stdDeviation="0.5">
+                            </feGaussianBlur>
+                            <feColorMatrix in="shadowBlurOuter1" result="shadowMatrixOuter1"
+                                values="0 0 0 0 0.407523777 0 0 0 0 0.407523777 0 0 0 0 0.407523777 0 0 0 0.304113855 0">
+                            </feColorMatrix>
+                            <feMerge>
+                                <feMergeNode in="shadowMatrixOuter1"></feMergeNode>
+                                <feMergeNode in="SourceGraphic"></feMergeNode>
+                            </feMerge>
+                        </filter>
+                    </defs>
+                    <g fill="none" fill-rule="evenodd" filter="url(#romaniaFlag_svg__a)" transform="translate(0 3)">
+                        <path fill="#FCDD0E" d="M0 .01h16v10.666H0z"></path>
+                        <path fill="#040677" d="M0 .01h5.333v10.667H0z"></path>
+                        <path fill="#EC0B0B" d="M10.667.01H16v10.667h-5.333z"></path>
+                    </g>
+                </svg>
+                OLX.ro
+            </a>
+            <a href="olx.ua" class="px-2">
+                <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 16 16" class="css-d7r8uj">
+                    <defs>
+                        <filter id="ukraineFlag_svg__a" width="150%" height="172.7%" x="-25%" y="-36.4%"
+                            filterUnits="objectBoundingBox">
+                            <feOffset dy="1" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset>
+                            <feGaussianBlur in="shadowOffsetOuter1" result="shadowBlurOuter1" stdDeviation="0.5">
+                            </feGaussianBlur>
+                            <feColorMatrix in="shadowBlurOuter1" result="shadowMatrixOuter1"
+                                values="0 0 0 0 0.407843137 0 0 0 0 0.407843137 0 0 0 0 0.407843137 0 0 0 0.3 0">
+                            </feColorMatrix>
+                            <feMerge>
+                                <feMergeNode in="shadowMatrixOuter1"></feMergeNode>
+                                <feMergeNode in="SourceGraphic"></feMergeNode>
+                            </feMerge>
+                        </filter>
+                    </defs>
+                    <g fill="none" fill-rule="evenodd" filter="url(#ukraineFlag_svg__a)" transform="translate(0 3)">
+                        <path fill="#F7D210" d="M0 .011h16v10.666H0z"></path>
+                        <path fill="#1762E7" d="M0 .011h16v5.333H0z"></path>
+                    </g>
+                </svg>
+                OLX.ua
+            </a>
+            <a href="olx.pt" class="px-2">
+                <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 16 16" class="css-d7r8uj">
+                    <defs>
+                        <filter id="portugalFlag_svg__a" width="150%" height="172.7%" x="-25%" y="-36.4%"
+                            filterUnits="objectBoundingBox">
+                            <feOffset dy="1" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset>
+                            <feGaussianBlur in="shadowOffsetOuter1" result="shadowBlurOuter1" stdDeviation="0.5">
+                            </feGaussianBlur>
+                            <feColorMatrix in="shadowBlurOuter1" result="shadowMatrixOuter1"
+                                values="0 0 0 0 0.407843137 0 0 0 0 0.407843137 0 0 0 0 0.407843137 0 0 0 0.3 0">
+                            </feColorMatrix>
+                            <feMerge>
+                                <feMergeNode in="shadowMatrixOuter1"></feMergeNode>
+                                <feMergeNode in="SourceGraphic"></feMergeNode>
+                            </feMerge>
+                        </filter>
+                    </defs>
+                    <g fill="none" fill-rule="evenodd" filter="url(#portugalFlag_svg__a)" transform="translate(0 3)">
+                        <path fill="#F71111" d="M0 .011h16v10.666H0z"></path>
+                        <path fill="#288703" d="M6.145.011v10.666H0V.011z"></path>
+                        <circle cx="6.145" cy="5.344" r="2" fill="#F8D80C"></circle>
+                        <path fill="#F71111" d="M5.02 4.344v1.25a1.125 1.125 0 0 0 2.25 0v-1.25H5.02z"></path>
+                        <path fill="#F0F0F0" fill-rule="nonzero"
+                            d="M6.145 5.969a.375.375 0 0 1-.375-.375v-.5h.75v.5a.375.375 0 0 1-.375.375z"></path>
+                    </g>
+                </svg>
+                OLX.pt
+            </a>
+        </div>
+    </footer>
+    </div>
+    <!-- Footer end -->
+
+    <!-- Script -->
+    <script src="JS/script.js"></script>
+    <!-- Script end -->
+</body>
+
+</html>
